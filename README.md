@@ -17,6 +17,9 @@ Landing page statique pour lancement fictif de la gamme **Respire Cheveux & Barb
 - Collecte profil test : genre, tranche d'age, besoin prioritaire.
 - Code promo affiche apres validation : `RESPIRE10`.
 - Personnalisation landing selon besoin.
+- Tableau age x sexe avec recommandations produit.
+- Cartes produits adaptees au segment choisi.
+- Images hero/popup adaptees au segment choisi.
 - A/B testing automatique sur messaging, variante `A` ou `B`.
 - Tracking local des clics CTA et ajouts panier dans `localStorage`.
 - Bouton pour refaire diagnostic sans recharger le site.

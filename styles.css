@@ -289,7 +289,24 @@ h3 {
 }
 
 .hero-media {
+  position: relative;
   min-height: 560px;
+}
+
+.image-segment {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  max-width: calc(100% - 36px);
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .diagnostic-band,
@@ -406,12 +423,98 @@ h3 {
   padding-top: clamp(42px, 7vw, 92px);
 }
 
+.matrix-section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-top: clamp(42px, 7vw, 92px);
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
 .section-heading {
   padding: 0 clamp(20px, 5vw, 72px) 40px;
 }
 
 .section-heading h2 {
   max-width: 900px;
+}
+
+.selected-reco {
+  margin: 0 clamp(20px, 5vw, 72px) 34px;
+  padding: 22px;
+  border: 1px solid var(--ink);
+  background: var(--soft);
+}
+
+.selected-reco span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.selected-reco strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: clamp(24px, 3vw, 42px);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.selected-reco p {
+  max-width: 980px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.matrix-wrap {
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+}
+
+.segment-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.segment-table th,
+.segment-table td {
+  width: 20%;
+  padding: 18px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.segment-table th {
+  background: var(--ink);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.segment-table td:first-child {
+  background: var(--cream);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.segment-table strong {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 900;
+}
+
+.segment-table span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .products {

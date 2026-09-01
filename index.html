@@ -45,7 +45,8 @@
           </div>
         </div>
         <div class="hero-media">
-          <img src="assets/images/skin-house.jpg" alt="Portrait peau nette Respire">
+          <img data-segment-image="hero" src="assets/images/skin-house.jpg" alt="Portrait peau nette Respire">
+          <span class="image-segment" id="image-segment">Image adaptee apres diagnostic</span>
         </div>
       </section>
 
@@ -85,6 +86,32 @@
         </div>
       </section>
 
+      <section class="matrix-section" id="matrix">
+        <div class="section-heading">
+          <p class="eyebrow">A/B testing age x sexe</p>
+          <h2>Chaque profil recoit une selection produit differente.</h2>
+        </div>
+        <div class="selected-reco" id="selected-reco">
+          <span>Votre segment</span>
+          <strong>Diagnostic en attente</strong>
+          <p>Le tableau sert de base au test : sexe + age modifient visuels, promesse et produits recommandes.</p>
+        </div>
+        <div class="matrix-wrap">
+          <table class="segment-table">
+            <thead>
+              <tr>
+                <th>Sexe</th>
+                <th>18-24</th>
+                <th>25-34</th>
+                <th>35-44</th>
+                <th>45+</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-body"></tbody>
+          </table>
+        </div>
+      </section>
+
       <section class="routine-grid" id="routines" aria-label="Routines personnalisees">
         <article class="routine-card is-active" data-need-card="fresh">
           <span>01</span>
@@ -110,55 +137,55 @@
         </div>
 
         <div class="products">
-          <article class="product-card">
+          <article class="product-card" data-product-card="0">
             <div class="product-image">
-              <img src="assets/images/soin-flash-boutons.jpg" alt="Packshot soin Respire utilise comme reference visuelle">
-              <span class="badge">Nouveau</span>
+              <img data-product-image src="assets/images/soin-flash-boutons.jpg" alt="Packshot soin Respire utilise comme reference visuelle">
+              <span class="badge" data-product-badge>Nouveau</span>
             </div>
             <div class="product-info">
               <p class="stars">★★★★★ 4,8</p>
-              <h3>Serum cuir chevelu</h3>
-              <p>Confort racines, sensation fraiche, fini non gras.</p>
-              <div class="price-row"><strong>24,90 euros</strong><button type="button" data-track="add">Ajouter</button></div>
+              <h3 data-product-title>Serum cuir chevelu</h3>
+              <p data-product-desc>Confort racines, sensation fraiche, fini non gras.</p>
+              <div class="price-row"><strong data-product-price>24,90 euros</strong><button type="button" data-track="add">Ajouter</button></div>
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-product-card="1">
             <div class="product-image">
-              <img src="assets/images/soin-flash-application.jpg" alt="Application soin Respire reference">
-              <span class="badge">Routine</span>
+              <img data-product-image src="assets/images/soin-flash-application.jpg" alt="Application soin Respire reference">
+              <span class="badge" data-product-badge>Routine</span>
             </div>
             <div class="product-info">
               <p class="stars">★★★★★ 4,7</p>
-              <h3>Brume cheveux anti-odeurs</h3>
-              <p>Pour cheveux exposes au sport, transport, cuisine ou pollution.</p>
-              <div class="price-row"><strong>18,90 euros</strong><button type="button" data-track="add">Ajouter</button></div>
+              <h3 data-product-title>Brume cheveux anti-odeurs</h3>
+              <p data-product-desc>Pour cheveux exposes au sport, transport, cuisine ou pollution.</p>
+              <div class="price-row"><strong data-product-price>18,90 euros</strong><button type="button" data-track="add">Ajouter</button></div>
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-product-card="2">
             <div class="product-image">
-              <img src="assets/images/deodorant-application.jpg" alt="Texture naturelle Respire reference">
-              <span class="badge">Barbe</span>
+              <img data-product-image src="assets/images/deodorant-application.jpg" alt="Texture naturelle Respire reference">
+              <span class="badge" data-product-badge>Barbe</span>
             </div>
             <div class="product-info">
               <p class="stars">★★★★★ 4,9</p>
-              <h3>Huile barbe naturelle</h3>
-              <p>Poil plus doux, peau nourrie, parfum propre et discret.</p>
-              <div class="price-row"><strong>21,90 euros</strong><button type="button" data-track="add">Ajouter</button></div>
+              <h3 data-product-title>Huile barbe naturelle</h3>
+              <p data-product-desc>Poil plus doux, peau nourrie, parfum propre et discret.</p>
+              <div class="price-row"><strong data-product-price>21,90 euros</strong><button type="button" data-track="add">Ajouter</button></div>
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-product-card="3">
             <div class="product-image">
-              <img src="assets/images/duo-stop-boutons-packshot.jpg" alt="Duo Respire reference packshot">
-              <span class="badge">Cure</span>
+              <img data-product-image src="assets/images/duo-stop-boutons-packshot.jpg" alt="Duo Respire reference packshot">
+              <span class="badge" data-product-badge>Cure</span>
             </div>
             <div class="product-info">
               <p class="stars">★★★★★ 4,6</p>
-              <h3>Collagene + levure de biere</h3>
-              <p>Cure 30 jours pour completer routine cheveux, peau et ongles.</p>
-              <div class="price-row"><strong>29,90 euros</strong><button type="button" data-track="add">Ajouter</button></div>
+              <h3 data-product-title>Collagene + levure de biere</h3>
+              <p data-product-desc>Cure 30 jours pour completer routine cheveux, peau et ongles.</p>
+              <div class="price-row"><strong data-product-price>29,90 euros</strong><button type="button" data-track="add">Ajouter</button></div>
             </div>
           </article>
         </div>
@@ -190,7 +217,7 @@
     <div class="profile-gate" id="profile-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
       <div class="gate-panel">
         <div class="gate-image">
-          <img src="assets/images/skin-house.jpg" alt="Portrait Respire">
+          <img data-segment-image="gate" src="assets/images/skin-house.jpg" alt="Portrait Respire">
         </div>
         <form class="gate-form" id="profile-form">
           <p class="eyebrow">Diagnostic Respire</p>
@@ -198,7 +225,7 @@
           <p>Recevez votre code premiere commande et affichez une routine adaptee.</p>
 
           <label>
-            Genre
+            Sexe
             <select name="gender" required>
               <option value="">Choisir</option>
               <option value="femme">Femme</option>

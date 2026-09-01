@@ -14,19 +14,19 @@ let toastTimer;
 const copy = {
   fresh: {
     A: {
-      heroText: "Votre routine racines fraiches pour garder cheveux propres plus longtemps, meme apres transport, sport ou journee dense.",
+      heroText: "Votre cuir chevelu respire mieux avec une routine racines fraiches, pensee pour garder cheveux propres plus longtemps.",
       diagnosticTitle: "Routine fraicheur racines activee.",
-      diagnosticText: "Votre selection met en avant brume anti-odeurs et serum cuir chevelu pour prolonger sensation propre."
+      diagnosticText: "Votre selection met en avant brume anti-odeurs et serum cuir chevelu pour prolonger sensation propre entre deux lavages."
     },
     B: {
-      heroText: "Moins d'odeurs, plus de legerete : une routine cheveux pensee pour vies actives et environnements urbains.",
+      heroText: "Moins d'odeurs, plus de legerete : une routine cuir chevelu pensee pour vies actives et environnements urbains.",
       diagnosticTitle: "Votre profil appelle une reponse anti-odeurs.",
-      diagnosticText: "Le contenu privilegie preuves de fraicheur, usage nomade et gestes rapides."
+      diagnosticText: "Le contenu privilegie fraicheur des racines, usage nomade et gestes rapides."
     }
   },
   strong: {
     A: {
-      heroText: "Collagene, levure de biere et soin racines : routine dedans-dehors pour accompagner force et eclat.",
+      heroText: "Collagene, levure de biere et soin racines : routine dedans-dehors pour accompagner cuir chevelu, force et eclat.",
       diagnosticTitle: "Routine force & densite activee.",
       diagnosticText: "Votre selection combine soin local et cure 30 jours pour une routine capillaire complete."
     },

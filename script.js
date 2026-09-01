@@ -3,6 +3,13 @@ const form = document.querySelector("#profile-form");
 const coupon = document.querySelector("#coupon");
 const personalNodes = document.querySelectorAll("[data-personal]");
 const needCards = document.querySelectorAll("[data-need-card]");
+const livePreview = document.querySelector("#live-preview");
+const profileChip = document.querySelector("#profile-chip");
+const resetProfile = document.querySelector("#reset-profile");
+const variantNote = document.querySelector("#variant-note");
+const toast = document.querySelector("#toast");
+
+let toastTimer;
 
 const copy = {
   fresh: {
@@ -43,6 +50,12 @@ const copy = {
   }
 };
 
+const needLabels = {
+  fresh: "Fraicheur racines",
+  strong: "Force & densite",
+  soft: "Douceur barbe"
+};
+
 function getVariant(profile) {
   const params = new URLSearchParams(window.location.search);
   const forced = params.get("ab");
@@ -70,6 +83,9 @@ function applyPersonalization(profile) {
 
   document.documentElement.dataset.ab = variant;
   document.documentElement.dataset.need = profile.need;
+  variantNote.textContent = `Variante ${variant} - ${needLabels[profile.need] || "routine personnalisee"}`;
+  profileChip.hidden = false;
+  profileChip.textContent = `${profile.age} - ${needLabels[profile.need] || "Diagnostic"}`;
 }
 
 function unlock(profile) {
@@ -81,6 +97,15 @@ function unlock(profile) {
     gate.classList.add("is-hidden");
     document.body.classList.remove("is-locked");
   }, 950);
+}
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    toast.hidden = true;
+  }, 2400);
 }
 
 function readStoredProfile() {
@@ -103,6 +128,29 @@ function track(eventName, detail = {}) {
   localStorage.setItem("respireEvents", JSON.stringify(events.slice(-50)));
 }
 
+function currentFormProfile() {
+  const data = new FormData(form);
+  return {
+    gender: data.get("gender"),
+    age: data.get("age"),
+    need: data.get("need")
+  };
+}
+
+function updateLivePreview() {
+  const profile = currentFormProfile();
+  const missing = !profile.gender || !profile.age || !profile.need;
+  if (missing) {
+    livePreview.querySelector("strong").textContent = "Completez votre profil";
+    livePreview.querySelector("p").textContent = "Votre page changera selon vos reponses.";
+    return;
+  }
+  const variant = getVariant(profile);
+  const selectedCopy = copy[profile.need]?.[variant] || copy.fresh.A;
+  livePreview.querySelector("strong").textContent = `${needLabels[profile.need]} - variante ${variant}`;
+  livePreview.querySelector("p").textContent = selectedCopy.heroText;
+}
+
 document.body.classList.add("is-locked");
 
 const storedProfile = readStoredProfile();
@@ -116,15 +164,38 @@ if (storedProfile?.gender && storedProfile?.age && storedProfile?.need) {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const data = new FormData(form);
-  const profile = {
-    gender: data.get("gender"),
-    age: data.get("age"),
-    need: data.get("need")
-  };
+  const profile = currentFormProfile();
   if (!profile.gender || !profile.age || !profile.need) return;
   track("profile_submitted", profile);
   unlock(profile);
+  showToast("Code RESPIRE10 active");
+});
+
+form.addEventListener("change", () => {
+  const profile = currentFormProfile();
+  localStorage.removeItem("respireABVariant");
+  updateLivePreview();
+  if (profile.gender && profile.age && profile.need) {
+    applyPersonalization(profile);
+    track("profile_previewed", profile);
+  }
+});
+
+profileChip.addEventListener("click", () => {
+  gate.classList.remove("is-hidden");
+  document.body.classList.add("is-locked");
+  showToast("Diagnostic rouvert");
+});
+
+resetProfile.addEventListener("click", () => {
+  localStorage.removeItem("respireProfile");
+  localStorage.removeItem("respireABVariant");
+  localStorage.removeItem("respireCoupon");
+  form.reset();
+  updateLivePreview();
+  gate.classList.remove("is-hidden");
+  document.body.classList.add("is-locked");
+  track("profile_reset");
 });
 
 document.querySelectorAll("a[href^='#'], [data-track]").forEach((element) => {
@@ -133,5 +204,8 @@ document.querySelectorAll("a[href^='#'], [data-track]").forEach((element) => {
       label: element.textContent.trim(),
       href: element.getAttribute("href") || null
     });
+    if (element.dataset.track === "add") {
+      showToast("Produit ajoute - code RESPIRE10 disponible");
+    }
   });
 });

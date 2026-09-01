@@ -127,7 +127,6 @@ select {
 }
 
 .header-cta {
-  justify-self: end;
   min-width: 92px;
   min-height: 42px;
   display: inline-flex;
@@ -137,6 +136,35 @@ select {
   color: #fff;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.header-actions {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-chip,
+.text-button {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.profile-chip {
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+}
+
+.profile-chip:hover,
+.text-button:hover {
+  color: var(--accent);
 }
 
 .hero {
@@ -241,6 +269,14 @@ h3 {
   gap: 8px;
 }
 
+.variant-note {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .hero-proof span {
   min-height: 34px;
   display: inline-flex;
@@ -272,11 +308,20 @@ h3 {
   background: var(--soft);
 }
 
-.diagnostic-band p:last-child {
+.diagnostic-summary {
   align-self: end;
+}
+
+.diagnostic-summary p {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 22px;
+}
+
+.text-button {
+  margin-top: 18px;
+  padding: 0;
+  font-size: 13px;
 }
 
 .routine-grid,
@@ -529,6 +574,34 @@ h3 {
   font-size: 18px;
 }
 
+.live-preview {
+  margin: 4px 0 14px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+
+.live-preview span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.live-preview strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.live-preview p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .gate-submit {
   width: 100%;
   margin-top: 8px;
@@ -554,6 +627,20 @@ h3 {
   margin-top: 6px;
   font-size: 32px;
   font-weight: 900;
+}
+
+.toast {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 120;
+  max-width: min(360px, calc(100vw - 44px));
+  padding: 16px 18px;
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.24);
 }
 
 @media (max-width: 980px) {
@@ -612,6 +699,10 @@ h3 {
     font-size: 12px;
   }
 
+  .profile-chip {
+    display: none;
+  }
+
   h1 {
     font-size: 52px;
   }
@@ -632,7 +723,7 @@ h3 {
   }
 
   .hero-text,
-  .diagnostic-band p:last-child,
+  .diagnostic-summary p,
   .offer-section p {
     font-size: 19px;
   }

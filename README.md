@@ -13,11 +13,14 @@ Landing page statique pour lancement fictif de la gamme **Respire Cheveux & Barb
 ## Fonctionnalites
 
 - Popup obligatoire a l'arrivee.
+- Apercu live de la routine pendant le remplissage.
 - Collecte profil test : genre, tranche d'age, besoin prioritaire.
 - Code promo affiche apres validation : `RESPIRE10`.
 - Personnalisation landing selon besoin.
 - A/B testing automatique sur messaging, variante `A` ou `B`.
 - Tracking local des clics CTA et ajouts panier dans `localStorage`.
+- Bouton pour refaire diagnostic sans recharger le site.
+- Toast de confirmation sur code promo et ajout panier.
 
 ## Test A/B
 

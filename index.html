@@ -21,7 +21,10 @@
         <a href="#produits">Produits</a>
         <a href="#preuves">Charte</a>
       </nav>
-      <a class="header-cta" href="#produits">Shop</a>
+      <div class="header-actions">
+        <button class="profile-chip" id="profile-chip" type="button" hidden>Diagnostic</button>
+        <a class="header-cta" href="#produits">Shop</a>
+      </div>
     </header>
 
     <main id="top">
@@ -34,6 +37,7 @@
             <a class="button button-dark" href="#produits">Decouvrir la gamme</a>
             <a class="button button-light" href="#diagnostic">Voir ma routine</a>
           </div>
+          <p class="variant-note" id="variant-note" aria-live="polite">Test A/B en attente du diagnostic.</p>
           <div class="hero-proof">
             <span>Origine naturelle</span>
             <span>Fabrique en France</span>
@@ -50,7 +54,10 @@
           <p class="eyebrow">Diagnostic personnalise</p>
           <h2 data-personal="diagnosticTitle">Votre routine cheveux & barbe s'adapte a votre profil.</h2>
         </div>
-        <p data-personal="diagnosticText">Votre diagnostic active une recommandation adaptee selon votre age, votre genre declare et votre besoin prioritaire.</p>
+        <div class="diagnostic-summary">
+          <p data-personal="diagnosticText">Votre diagnostic active une recommandation adaptee selon votre age, votre genre declare et votre besoin prioritaire.</p>
+          <button class="text-button" id="reset-profile" type="button">Refaire diagnostic</button>
+        </div>
       </section>
 
       <section class="routine-grid" id="routines" aria-label="Routines personnalisees">
@@ -197,6 +204,12 @@
             </select>
           </label>
 
+          <div class="live-preview" id="live-preview" aria-live="polite">
+            <span>Apercu routine</span>
+            <strong>Completez votre profil</strong>
+            <p>Votre page changera selon vos reponses.</p>
+          </div>
+
           <button class="button button-dark gate-submit" type="submit">RECUPERER MA REDUCTION</button>
           <div class="coupon" id="coupon" hidden>
             <span>Votre code</span>
@@ -205,6 +218,8 @@
         </form>
       </div>
     </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
     <script src="script.js"></script>
   </body>

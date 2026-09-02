@@ -35,101 +35,101 @@ const needLabels = {
 };
 
 const products = {
-  scalpSerum: {
-    badge: "Racines",
-    title: "Serum cuir chevelu",
-    desc: "Apaise inconfort, aide racines a rester nettes, fini non gras.",
-    price: "24,90 euros",
-    image: "assets/images/soin-flash-boutons.jpg",
-    alt: "Serum cuir chevelu Respire"
+  deodorantStick: {
+    badge: "Iconique",
+    title: "Déodorant stick Fleur de Coton",
+    desc: "Format stick Respire, usage quotidien, frais et pratique pour profils actifs.",
+    price: "11.90€",
+    image: "assets/images/real-products/deodorant-stick.jpg",
+    alt: "Déodorant Stick Respire Fleur de Coton"
   },
-  freshMist: {
+  brumeSolaire: {
     badge: "Nomade",
-    title: "Brume cheveux anti-odeurs",
-    desc: "Rafraichit entre deux lavages apres sport, transport ou cuisine.",
-    price: "18,90 euros",
-    image: "assets/images/soin-flash-application.jpg",
-    alt: "Brume cheveux Respire"
+    title: "Brume Solaire Protection Urbaine",
+    desc: "Protection facile à réappliquer, adaptée ville, sorties et routine rapide.",
+    price: "16.90€",
+    image: "assets/images/real-products/brume-solaire-spf50.jpg",
+    alt: "Brume Solaire Protection Urbaine SPF50 Respire"
   },
-  beardOil: {
-    badge: "Barbe",
-    title: "Huile barbe naturelle",
-    desc: "Assouplit poil, nourrit peau sous barbe, parfum propre discret.",
-    price: "21,90 euros",
-    image: "assets/images/homme-barbe-soin.png",
-    alt: "Huile barbe Respire"
+  routineImperfections: {
+    badge: "Routine",
+    title: "Routine SOS Imperfections",
+    desc: "Routine complète pour peau nette, utile quand rythme, sport et stress marquent le visage.",
+    price: "56.60€",
+    image: "assets/images/real-products/routine-sos-imperfections.jpg",
+    alt: "Routine SOS Imperfections Respire"
   },
-  beardCleanser: {
-    badge: "Nettoyant",
-    title: "Nettoyant barbe & visage",
-    desc: "Nettoie barbe, peau et racines sans tirer ni alourdir.",
-    price: "17,90 euros",
-    image: "assets/images/homme-deodorant-application.png",
-    alt: "Nettoyant barbe Respire"
+  serumGlow: {
+    badge: "Éclat",
+    title: "Sérum Glow & Protect",
+    desc: "Sérum vitamine C SPF30 pour éclat, protection et bonne mine quotidienne.",
+    price: "27.90€",
+    image: "assets/images/real-products/serum-glow-protect.jpg",
+    alt: "Sérum Glow & Protect Respire"
   },
-  collagenYeast: {
-    badge: "Cure",
-    title: "Collagene + levure de biere",
-    desc: "Cure 30 jours pour accompagner cheveux, peau et ongles.",
-    price: "29,90 euros",
-    image: "assets/images/duo-stop-boutons-packshot.jpg",
-    alt: "Cure collagene et levure de biere Respire"
-  },
-  repairMask: {
-    badge: "Nutrition",
-    title: "Masque longueurs reparateur",
-    desc: "Nourrit longueurs seches, apporte douceur et facilite coiffage.",
-    price: "22,90 euros",
-    image: "assets/images/deodorant-fleur-coton-packshot.jpg",
-    alt: "Masque cheveux Respire"
-  },
-  urbanShield: {
-    badge: "Protect",
-    title: "Spray anti-pollution cheveux",
-    desc: "Protege cheveux exposes a ville, chaleur douce et friction.",
-    price: "19,90 euros",
-    image: "assets/images/deodorant-application.jpg",
-    alt: "Spray protection cheveux Respire"
-  },
-  densitySerum: {
-    badge: "Densite",
-    title: "Serum racines densite",
-    desc: "Massage racines pour cuir chevelu tonifie et routine densite.",
-    price: "26,90 euros",
-    image: "assets/images/serum-boost-application.jpg",
-    alt: "Serum densite Respire"
-  },
-  soothingCleanser: {
+  huileDemaquillante: {
     badge: "Doux",
-    title: "Gel lavant cuir chevelu sensible",
-    desc: "Nettoyage doux pour cuir chevelu reactif et sensation de tiraillement.",
-    price: "16,90 euros",
-    image: "assets/images/serum-glow-packshot.jpg",
-    alt: "Gel lavant cuir chevelu Respire"
+    title: "Huile Lactée Démaquillante",
+    desc: "Nettoyage doux, peau nette et confortable, bon socle routine visage.",
+    price: "17.90€",
+    image: "assets/images/real-products/huile-lactee-demaquillante.jpg",
+    alt: "Huile Lactée Démaquillante Respire"
   },
-  beardBalm: {
-    badge: "Baume",
-    title: "Baume barbe & peau seche",
-    desc: "Nourrit barbe, limite inconfort sous barbe, fini souple.",
-    price: "20,90 euros",
-    image: "assets/images/homme-barbe-soin.png",
-    alt: "Baume barbe Respire"
+  soinLevres: {
+    badge: "Collagène",
+    title: "Soin Lèvres Collagène Booster",
+    desc: "Soin lèvres SPF aux peptides, logique collagène déjà crédible dans univers Respire.",
+    price: "19.90€",
+    image: "assets/images/real-products/soin-levres-collagene-booster.jpg",
+    alt: "Soin Lèvres Collagène Booster Respire"
   },
-  scalpScrub: {
-    badge: "Detox",
-    title: "Gommage cuir chevelu doux",
-    desc: "Aide a decoller residus coiffants et exces de sebum sans agresser.",
-    price: "19,90 euros",
-    image: "assets/images/skin-house.jpg",
-    alt: "Gommage cuir chevelu Respire"
+  duoBonneMine: {
+    badge: "Bundle",
+    title: "Duo SOS Bonne Mine",
+    desc: "Sérum glow + stick regard : réponse fatigue, teint terne et routine visible.",
+    price: "42.95€",
+    image: "assets/images/real-products/duo-sos-bonne-mine.jpg",
+    alt: "Duo SOS Bonne Mine Respire"
   },
-  nightSerum: {
-    badge: "Nuit",
-    title: "Serum nuit longueurs",
-    desc: "Soin sans rincage pour longueurs fatiguees, toucher plus doux au reveil.",
-    price: "25,90 euros",
-    image: "assets/images/soin-flash-application.jpg",
-    alt: "Serum nuit cheveux Respire"
+  stickSolaire: {
+    badge: "SPF50+",
+    title: "Stick Solaire Matifiant SPF50+",
+    desc: "Protection solaire invisible et matifiante, utile en ville et au quotidien.",
+    price: "13.90€",
+    image: "assets/images/real-products/stick-solaire-spf50.jpg",
+    alt: "Stick Solaire Matifiant SPF50+ Respire"
+  },
+  duoHydratation: {
+    badge: "Hydratation",
+    title: "Duo Protection & Hydratation Quotidienne",
+    desc: "Duo soin + protection pour peau plus exigeante, confort et prévention.",
+    price: "39.70€",
+    image: "assets/images/real-products/duo-protection-hydratation.jpg",
+    alt: "Duo Protection & Hydratation Quotidienne Respire"
+  },
+  nettoyantStick: {
+    badge: "Nettoyant",
+    title: "Soin Nettoyant Visage stick",
+    desc: "Stick nettoyant doux et pratique, cohérent avec routine barbe/visage rapide.",
+    price: "13.90€",
+    image: "assets/images/real-products/soin-nettoyant-visage-stick.jpg",
+    alt: "Soin Nettoyant Visage stick Respire"
+  },
+  duoJourneeEte: {
+    badge: "Outdoor",
+    title: "Duo Journée d’Été",
+    desc: "Déodorant + protection solaire, logique chaleur, transpiration et cheveux exposés.",
+    price: "34.80€",
+    image: "assets/images/real-products/duo-journee-ete.jpg",
+    alt: "Duo Journée d’Été Respire"
+  },
+  stickRegard: {
+    badge: "Fraîcheur",
+    title: "Stick Fraîcheur Regard",
+    desc: "Geste frais à la vitamine C pour profils qui cherchent effet défatiguant rapide.",
+    price: "19.90€",
+    image: "assets/images/real-products/stick-fraicheur-regard.jpg",
+    alt: "Stick Fraîcheur Regard Respire"
   }
 };
 
@@ -138,121 +138,121 @@ const segments = {
     gender: "femme",
     age: "18-24",
     need: "fresh",
-    image: "assets/images/segments/femme-18-24.jpg",
+    image: "assets/images/segments-final/femme-18-24.jpg",
     alt: "Visuel Respire femme 18-24",
     heroTitle: "Racines fraiches, cheveux legers, routine rapide.",
     heroA: "Pour 18-24 ans : routine cuir chevelu anti-odeurs, pensee pour sport, transports, soirees et cheveux vite lourds.",
     heroB: "Racines propres plus longtemps : gestes simples pour garder cheveux frais entre deux lavages.",
     diagnosticTitle: "Segment femme 18-24 : fraicheur et rythme intense.",
-    diagnosticText: "Recommandation : brume anti-odeurs, serum racines, spray anti-pollution et cure courte pour routine rapide.",
+    diagnosticText: "Recommandation : Déodorant stick, Brume Solaire Protection Urbaine, Routine SOS Imperfections et Stick Fraîcheur Regard.",
     title: "Fraicheur, racines grasses, routine rapide",
     why: "18-24 : besoin frequent de fraicheur immediate, format nomade, prix accessible, usage post-sport/transport.",
-    items: ["freshMist", "scalpSerum", "urbanShield", "collagenYeast"]
+    items: ["deodorantStick", "brumeSolaire", "routineImperfections", "stickRegard"]
   },
   "femme|25-34": {
     gender: "femme",
     age: "25-34",
     need: "strong",
-    image: "assets/images/segments/femme-25-34.jpg",
+    image: "assets/images/segments-final/femme-25-34.jpg",
     alt: "Visuel Respire femme 25-34",
     heroTitle: "Cuir chevelu equilibre, longueurs lumineuses.",
     heroA: "Pour 25-34 ans : routine beaute complete qui combine cuir chevelu sain, longueurs nourries et eclat.",
     heroB: "Une routine cheveux plus reguliere, plus sensorielle, pour garder equilibre et brillance au quotidien.",
     diagnosticTitle: "Segment femme 25-34 : equilibre et eclat.",
-    diagnosticText: "Recommandation : serum cuir chevelu, masque longueurs, cure collagene/levure et protection urbaine.",
+    diagnosticText: "Recommandation : Sérum Glow & Protect, Huile Lactée Démaquillante, Soin Lèvres Collagène Booster et Stick Solaire.",
     title: "Equilibre cuir chevelu, longueurs, eclat",
     why: "25-34 : routine beaute plus installee, attente de resultats visibles, interet pour cure et protection.",
-    items: ["scalpSerum", "repairMask", "collagenYeast", "urbanShield"]
+    items: ["serumGlow", "huileDemaquillante", "soinLevres", "stickSolaire"]
   },
   "femme|35-44": {
     gender: "femme",
     age: "35-44",
     need: "strong",
-    image: "assets/images/segments/femme-35-44.jpg",
+    image: "assets/images/segments-final/femme-35-44.jpg",
     alt: "Visuel Respire femme 35-44",
     heroTitle: "Densite percue, racines tonifiees, cheveux proteges.",
     heroA: "Pour 35-44 ans : routine densite qui cible cuir chevelu, nutrition et protection quotidienne.",
     heroB: "Soin racines + cure 30 jours : approche preventive pour cheveux fatigues par stress, chaleur et pollution.",
     diagnosticTitle: "Segment femme 35-44 : densite et prevention.",
-    diagnosticText: "Recommandation : serum densite, collagene + levure de biere, masque nutrition et serum cuir chevelu.",
+    diagnosticText: "Recommandation : Duo SOS Bonne Mine, Sérum Glow & Protect, Stick Solaire Matifiant et Soin Lèvres Collagène Booster.",
     title: "Densite, nutrition, protection quotidienne",
     why: "35-44 : attention plus forte a densite percue, fatigue capillaire, nutrition et prevention.",
-    items: ["densitySerum", "collagenYeast", "repairMask", "scalpSerum"]
+    items: ["duoBonneMine", "serumGlow", "stickSolaire", "soinLevres"]
   },
   "femme|45+": {
     gender: "femme",
     age: "45+",
     need: "strong",
-    image: "assets/images/segments/femme-45-plus.jpg",
+    image: "assets/images/segments-final/femme-45-plus.jpg",
     alt: "Visuel Respire femme 45 ans et plus",
     heroTitle: "Confort racines, douceur longueurs, routine douce.",
     heroA: "Pour 45 ans et plus : routine douce pour cuir chevelu sensible, cheveux plus secs et entretien regulier.",
     heroB: "Des gestes naturels, doux et constants pour prendre soin du cuir chevelu et nourrir les longueurs.",
     diagnosticTitle: "Segment femme 45+ : confort et nutrition.",
-    diagnosticText: "Recommandation : gel lavant doux, cure collagene/levure, masque reparateur et serum nuit.",
+    diagnosticText: "Recommandation : Duo Protection & Hydratation, Huile Lactée Démaquillante, Soin Lèvres Collagène Booster et Stick Solaire.",
     title: "Confort cuir chevelu, nutrition, routine douce",
     why: "45+ : besoin de douceur, cuir chevelu plus sensible, cheveux plus secs, routine rassurante.",
-    items: ["soothingCleanser", "collagenYeast", "repairMask", "nightSerum"]
+    items: ["duoHydratation", "huileDemaquillante", "soinLevres", "stickSolaire"]
   },
   "homme|18-24": {
     gender: "homme",
     age: "18-24",
     need: "fresh",
-    image: "assets/images/segments/homme-18-24.jpg",
+    image: "assets/images/segments-final/homme-18-24.jpg",
     alt: "Visuel Respire homme 18-24",
     heroTitle: "Cheveux frais, racines nettes, zero prise de tete.",
     heroA: "Pour 18-24 ans : routine anti-odeurs et racines nettes, adaptee sport, casquette, transports et sorties.",
     heroB: "Moins d'odeurs, plus de propre : routine courte pour cheveux vite lourds et debut de barbe.",
     diagnosticTitle: "Segment homme 18-24 : fraicheur et usage rapide.",
-    diagnosticText: "Recommandation : brume cheveux, serum cuir chevelu, nettoyant barbe/visage et spray anti-pollution.",
+    diagnosticText: "Recommandation : Déodorant stick, Soin Nettoyant Visage stick, Brume Solaire Protection Urbaine et Routine SOS Imperfections.",
     title: "Fraicheur, odeurs, racines nettes",
     why: "18-24 : besoin pratique, prix accessible, odeurs post-sport/transport, routine courte.",
-    items: ["freshMist", "scalpSerum", "beardCleanser", "urbanShield"]
+    items: ["deodorantStick", "nettoyantStick", "brumeSolaire", "routineImperfections"]
   },
   "homme|25-34": {
     gender: "homme",
     age: "25-34",
     need: "soft",
-    image: "assets/images/segments/homme-25-34.jpg",
+    image: "assets/images/segments-final/homme-25-34.jpg",
     alt: "Visuel Respire homme 25-34",
     heroTitle: "Barbe propre, cuir chevelu sain, routine bureau.",
     heroA: "Pour 25-34 ans : routine nette et non grasse pour barbe, cuir chevelu et cheveux exposes au quotidien.",
     heroB: "Une barbe plus douce et des racines plus propres, avec gestes rapides avant travail ou sortie.",
     diagnosticTitle: "Segment homme 25-34 : barbe et cuir chevelu.",
-    diagnosticText: "Recommandation : huile barbe, nettoyant barbe/visage, serum cuir chevelu et brume cheveux.",
+    diagnosticText: "Recommandation : Déodorant stick, Soin Nettoyant Visage stick, Sérum Glow & Protect et Stick Solaire Matifiant.",
     title: "Barbe propre, cuir chevelu sain, usage bureau",
     why: "25-34 : barbe plus installee, attente de routine efficace, propre, discrete et rapide.",
-    items: ["beardOil", "beardCleanser", "scalpSerum", "freshMist"]
+    items: ["deodorantStick", "nettoyantStick", "serumGlow", "stickSolaire"]
   },
   "homme|35-44": {
     gender: "homme",
     age: "35-44",
     need: "strong",
-    image: "assets/images/segments/homme-35-44.jpg",
+    image: "assets/images/segments-final/homme-35-44.jpg",
     alt: "Visuel Respire homme 35-44",
     heroTitle: "Racines tonifiees, barbe nourrie, routine force.",
     heroA: "Pour 35-44 ans : routine densite percue, cure 30 jours et soin barbe sans fini gras.",
     heroB: "Cuir chevelu tonifie, barbe plus souple, cheveux entretenus : routine preventive simple.",
     diagnosticTitle: "Segment homme 35-44 : densite et barbe.",
-    diagnosticText: "Recommandation : serum densite, collagene + levure de biere, huile barbe et baume barbe.",
+    diagnosticText: "Recommandation : Duo Journée d’Été, Sérum Glow & Protect, Stick Solaire Matifiant et Soin Lèvres Collagène Booster.",
     title: "Densite racines, barbe douce, cure 30 jours",
     why: "35-44 : besoin de prevention, densite percue, barbe plus dense, entretien regulier.",
-    items: ["densitySerum", "collagenYeast", "beardOil", "beardBalm"]
+    items: ["duoJourneeEte", "serumGlow", "stickSolaire", "soinLevres"]
   },
   "homme|45+": {
     gender: "homme",
     age: "45+",
     need: "soft",
-    image: "assets/images/segments/homme-45-plus.jpg",
+    image: "assets/images/segments-final/homme-45-plus.jpg",
     alt: "Visuel Respire homme 45 ans et plus",
     heroTitle: "Cuir chevelu confortable, barbe nourrie, geste simple.",
     heroA: "Pour 45 ans et plus : routine douce pour cuir chevelu sensible, barbe seche et cheveux plus exigeants.",
     heroB: "Moins d'inconfort, plus de douceur : soin racines, barbe et longueurs avec gestes essentiels.",
     diagnosticTitle: "Segment homme 45+ : confort et entretien.",
-    diagnosticText: "Recommandation : gel lavant doux, cure collagene/levure, baume barbe et masque reparateur.",
+    diagnosticText: "Recommandation : Duo Protection & Hydratation, Huile Lactée Démaquillante, Stick Solaire Matifiant et Soin Lèvres Collagène Booster.",
     title: "Cuir chevelu confortable, barbe nourrie, entretien simple",
     why: "45+ : besoin de confort, peau sous barbe, cheveux plus secs, routine courte et rassurante.",
-    items: ["soothingCleanser", "collagenYeast", "beardBalm", "repairMask"]
+    items: ["duoHydratation", "huileDemaquillante", "stickSolaire", "soinLevres"]
   }
 };
 

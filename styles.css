@@ -291,6 +291,11 @@ h3 {
 .hero-media {
   position: relative;
   min-height: 560px;
+  background: var(--cream);
+}
+
+.hero-media img {
+  object-fit: contain;
 }
 
 .image-segment {
@@ -668,10 +673,12 @@ h3 {
 .gate-panel {
   width: min(1160px, 100%);
   min-height: min(650px, calc(100vh - 48px));
+  max-height: calc(100vh - 48px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #fff;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  overflow: auto;
 }
 
 .gate-image {
@@ -906,21 +913,26 @@ h3 {
 
   .gate-panel {
     min-height: 100vh;
+    max-height: 100vh;
   }
 
   .gate-image {
-    min-height: 190px;
+    min-height: 150px;
+    max-height: 180px;
   }
 
   .gate-form {
-    padding: 24px 18px 32px;
+    padding: 18px 18px 28px;
+    justify-content: flex-start;
   }
 
   .gate-form h2 {
-    font-size: 42px;
+    margin-bottom: 14px;
+    font-size: 38px;
   }
 
   .gate-form > p:not(.eyebrow) {
-    font-size: 20px;
+    margin-bottom: 16px;
+    font-size: 18px;
   }
 }

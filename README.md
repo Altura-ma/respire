@@ -8,6 +8,7 @@ Landing page statique pour lancement fictif de la gamme **Respire Cheveux & Barb
 - `styles.css` : direction artistique Respire
 - `script.js` : popup profil, personnalisation, A/B testing, tracking local
 - `assets/images/` : images de reference Respire
+- `assets/images/segments/` : 8 visuels hero adaptes age x sexe
 - `assets/fonts/` : polices observees sur site officiel Respire
 
 ## Fonctionnalites

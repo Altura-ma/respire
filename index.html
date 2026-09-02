@@ -31,7 +31,7 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">Nouvelle gamme</p>
-          <h1 id="hero-title">Le cuir chevelu aussi a besoin de respirer.</h1>
+          <h1 id="hero-title" data-personal="heroTitle">Le cuir chevelu aussi a besoin de respirer.</h1>
           <p class="hero-text" data-personal="heroText">Routine naturelle pour prendre soin du cuir chevelu, des racines, des longueurs et de la barbe, sans compromis sur la sensorialite.</p>
           <div class="hero-actions">
             <a class="button button-dark" href="#produits">Decouvrir la gamme</a>
@@ -81,7 +81,7 @@
           <h2 data-personal="diagnosticTitle">Votre routine cheveux & barbe s'adapte a votre profil.</h2>
         </div>
         <div class="diagnostic-summary">
-          <p data-personal="diagnosticText">Votre diagnostic active une recommandation adaptee selon votre age, votre genre declare et votre besoin prioritaire.</p>
+          <p data-personal="diagnosticText">Votre diagnostic active une recommandation adaptee selon votre sexe et votre tranche d'age.</p>
           <button class="text-button" id="reset-profile" type="button">Refaire diagnostic</button>
         </div>
       </section>
@@ -230,8 +230,6 @@
               <option value="">Choisir</option>
               <option value="femme">Femme</option>
               <option value="homme">Homme</option>
-              <option value="non-binaire">Non-binaire</option>
-              <option value="non-renseigne">Je prefere ne pas dire</option>
             </select>
           </label>
 
@@ -246,20 +244,10 @@
             </select>
           </label>
 
-          <label>
-            Besoin prioritaire
-            <select name="need" required>
-              <option value="">Choisir</option>
-              <option value="fresh">Cheveux frais plus longtemps</option>
-              <option value="strong">Force, densite, routine complementaire</option>
-              <option value="soft">Barbe douce et peau confortable</option>
-            </select>
-          </label>
-
           <div class="live-preview" id="live-preview" aria-live="polite">
             <span>Apercu routine</span>
             <strong>Completez votre profil</strong>
-            <p>Votre page changera selon vos reponses.</p>
+            <p>Votre page changera selon votre sexe et votre tranche d'age.</p>
           </div>
 
           <button class="button button-dark gate-submit" type="submit">RECUPERER MA REDUCTION</button>

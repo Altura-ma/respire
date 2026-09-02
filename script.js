@@ -16,51 +16,6 @@ const productCards = [...document.querySelectorAll("[data-product-card]")];
 
 let toastTimer;
 
-const copy = {
-  fresh: {
-    A: {
-      heroText: "Votre cuir chevelu respire mieux avec une routine racines fraiches, pensee pour garder cheveux propres plus longtemps.",
-      diagnosticTitle: "Routine fraicheur racines activee.",
-      diagnosticText: "Votre selection met en avant brume anti-odeurs et serum cuir chevelu pour prolonger sensation propre entre deux lavages."
-    },
-    B: {
-      heroText: "Moins d'odeurs, plus de legerete : une routine cuir chevelu pensee pour vies actives et environnements urbains.",
-      diagnosticTitle: "Votre profil appelle une reponse anti-odeurs.",
-      diagnosticText: "Le contenu privilegie fraicheur des racines, usage nomade et gestes rapides."
-    }
-  },
-  strong: {
-    A: {
-      heroText: "Collagene, levure de biere et soin racines : routine dedans-dehors pour accompagner cuir chevelu, force et eclat.",
-      diagnosticTitle: "Routine force & densite activee.",
-      diagnosticText: "Votre selection combine soin local et cure 30 jours pour une routine capillaire complete."
-    },
-    B: {
-      heroText: "Une routine quotidienne pour soutenir cheveux, peau et ongles, avec gestes simples et naturels.",
-      diagnosticTitle: "Votre profil favorise approche beauty inside.",
-      diagnosticText: "Le contenu met en avant cure, regularite et complementarite avec soins externes."
-    }
-  },
-  soft: {
-    A: {
-      heroText: "Barbe douce, peau confortable, fini propre : routine naturelle pour entretenir sans alourdir.",
-      diagnosticTitle: "Routine barbe douce activee.",
-      diagnosticText: "Votre selection met en avant huile, baume et nettoyant doux pour confort quotidien."
-    },
-    B: {
-      heroText: "Une barbe nette qui respire : poil assoupli, peau apaisee, parfum discret.",
-      diagnosticTitle: "Votre profil privilegie confort barbe.",
-      diagnosticText: "Le contenu insiste sur douceur, peau sous barbe et rituel rapide."
-    }
-  }
-};
-
-const needLabels = {
-  fresh: "Fraicheur racines",
-  strong: "Force & densite",
-  soft: "Douceur barbe"
-};
-
 const ageLabels = {
   "18-24": "18-24 ans",
   "25-34": "25-34 ans",
@@ -70,84 +25,13 @@ const ageLabels = {
 
 const genderLabels = {
   femme: "Femme",
-  homme: "Homme",
-  "non-binaire": "Profil libre",
-  "non-renseigne": "Profil neutre"
+  homme: "Homme"
 };
 
-const visualSegments = {
-  femme: {
-    "18-24": {
-      src: "assets/images/skin-house.jpg",
-      alt: "Visuel Respire adapte au segment femme 18-24"
-    },
-    "25-34": {
-      src: "assets/images/soin-flash-application.jpg",
-      alt: "Application soin Respire adaptee au segment femme 25-34"
-    },
-    "35-44": {
-      src: "assets/images/deodorant-application.jpg",
-      alt: "Texture Respire adaptee au segment femme 35-44"
-    },
-    "45+": {
-      src: "assets/images/duo-stop-boutons-packshot.jpg",
-      alt: "Routine Respire adaptee au segment femme 45 ans et plus"
-    }
-  },
-  homme: {
-    "18-24": {
-      src: "assets/images/homme-barbe-soin.png",
-      alt: "Visuel barbe Respire adapte au segment homme 18-24"
-    },
-    "25-34": {
-      src: "assets/images/homme-deodorant-application.png",
-      alt: "Application produit Respire adaptee au segment homme 25-34"
-    },
-    "35-44": {
-      src: "assets/images/homme-barbe-soin.png",
-      alt: "Routine barbe Respire adaptee au segment homme 35-44"
-    },
-    "45+": {
-      src: "assets/images/homme-deodorant-application.png",
-      alt: "Routine Respire adaptee au segment homme 45 ans et plus"
-    }
-  },
-  "non-binaire": {
-    "18-24": {
-      src: "assets/images/soin-flash-application.jpg",
-      alt: "Visuel Respire adapte au segment 18-24"
-    },
-    "25-34": {
-      src: "assets/images/skin-house.jpg",
-      alt: "Visuel Respire adapte au segment 25-34"
-    },
-    "35-44": {
-      src: "assets/images/duo-stop-boutons-packshot.jpg",
-      alt: "Routine Respire adaptee au segment 35-44"
-    },
-    "45+": {
-      src: "assets/images/deodorant-application.jpg",
-      alt: "Texture Respire adaptee au segment 45 ans et plus"
-    }
-  },
-  "non-renseigne": {
-    "18-24": {
-      src: "assets/images/soin-flash-application.jpg",
-      alt: "Visuel Respire adapte au segment 18-24"
-    },
-    "25-34": {
-      src: "assets/images/skin-house.jpg",
-      alt: "Visuel Respire adapte au segment 25-34"
-    },
-    "35-44": {
-      src: "assets/images/duo-stop-boutons-packshot.jpg",
-      alt: "Routine Respire adaptee au segment 35-44"
-    },
-    "45+": {
-      src: "assets/images/deodorant-application.jpg",
-      alt: "Texture Respire adaptee au segment 45 ans et plus"
-    }
-  }
+const needLabels = {
+  fresh: "Fraicheur racines",
+  strong: "Force & densite",
+  soft: "Douceur barbe"
 };
 
 const products = {
@@ -202,7 +86,7 @@ const products = {
   urbanShield: {
     badge: "Protect",
     title: "Spray anti-pollution cheveux",
-    desc: "Geste quotidien pour cheveux exposes a ville, chaleur douce, friction.",
+    desc: "Protege cheveux exposes a ville, chaleur douce et friction.",
     price: "19,90 euros",
     image: "assets/images/deodorant-application.jpg",
     alt: "Spray protection cheveux Respire"
@@ -212,101 +96,173 @@ const products = {
     title: "Serum racines densite",
     desc: "Massage racines pour cuir chevelu tonifie et routine densite.",
     price: "26,90 euros",
-    image: "assets/images/soin-flash-boutons.jpg",
+    image: "assets/images/serum-boost-application.jpg",
     alt: "Serum densite Respire"
+  },
+  soothingCleanser: {
+    badge: "Doux",
+    title: "Gel lavant cuir chevelu sensible",
+    desc: "Nettoyage doux pour cuir chevelu reactif et sensation de tiraillement.",
+    price: "16,90 euros",
+    image: "assets/images/serum-glow-packshot.jpg",
+    alt: "Gel lavant cuir chevelu Respire"
+  },
+  beardBalm: {
+    badge: "Baume",
+    title: "Baume barbe & peau seche",
+    desc: "Nourrit barbe, limite inconfort sous barbe, fini souple.",
+    price: "20,90 euros",
+    image: "assets/images/homme-barbe-soin.png",
+    alt: "Baume barbe Respire"
+  },
+  scalpScrub: {
+    badge: "Detox",
+    title: "Gommage cuir chevelu doux",
+    desc: "Aide a decoller residus coiffants et exces de sebum sans agresser.",
+    price: "19,90 euros",
+    image: "assets/images/skin-house.jpg",
+    alt: "Gommage cuir chevelu Respire"
+  },
+  nightSerum: {
+    badge: "Nuit",
+    title: "Serum nuit longueurs",
+    desc: "Soin sans rincage pour longueurs fatiguees, toucher plus doux au reveil.",
+    price: "25,90 euros",
+    image: "assets/images/soin-flash-application.jpg",
+    alt: "Serum nuit cheveux Respire"
   }
 };
 
-const recommendationMatrix = {
-  femme: {
-    "18-24": {
-      title: "Fraicheur, racines grasses, routine rapide",
-      why: "Profil souvent sensible au sport, transports, rythme et lavages frequents.",
-      items: ["freshMist", "scalpSerum", "urbanShield", "collagenYeast"]
-    },
-    "25-34": {
-      title: "Equilibre cuir chevelu, longueurs, eclat",
-      why: "Profil routine beaute plus installee, besoin de regularite et resultats visibles.",
-      items: ["scalpSerum", "repairMask", "collagenYeast", "urbanShield"]
-    },
-    "35-44": {
-      title: "Densite, nutrition, protection quotidienne",
-      why: "Profil plus attentif a densite percue, fatigue capillaire, chaleur et pollution.",
-      items: ["densitySerum", "collagenYeast", "repairMask", "urbanShield"]
-    },
-    "45+": {
-      title: "Confort cuir chevelu, nutrition, routine douce",
-      why: "Profil utile pour cuir chevelu plus sensible, cheveux plus secs, soin regulier.",
-      items: ["scalpSerum", "collagenYeast", "repairMask", "densitySerum"]
-    }
+const segments = {
+  "femme|18-24": {
+    gender: "femme",
+    age: "18-24",
+    need: "fresh",
+    image: "assets/images/skin-house.jpg",
+    alt: "Visuel Respire femme 18-24",
+    heroTitle: "Racines fraiches, cheveux legers, routine rapide.",
+    heroA: "Pour 18-24 ans : routine cuir chevelu anti-odeurs, pensee pour sport, transports, soirees et cheveux vite lourds.",
+    heroB: "Racines propres plus longtemps : gestes simples pour garder cheveux frais entre deux lavages.",
+    diagnosticTitle: "Segment femme 18-24 : fraicheur et rythme intense.",
+    diagnosticText: "Recommandation : brume anti-odeurs, serum racines, spray anti-pollution et cure courte pour routine rapide.",
+    title: "Fraicheur, racines grasses, routine rapide",
+    why: "18-24 : besoin frequent de fraicheur immediate, format nomade, prix accessible, usage post-sport/transport.",
+    items: ["freshMist", "scalpSerum", "urbanShield", "collagenYeast"]
   },
-  homme: {
-    "18-24": {
-      title: "Fraicheur, odeurs, racines nettes",
-      why: "Profil oriente sport, sneakers/casquette, transports, cheveux vite lourds.",
-      items: ["freshMist", "scalpSerum", "beardCleanser", "urbanShield"]
-    },
-    "25-34": {
-      title: "Barbe propre, cuir chevelu sain, usage bureau",
-      why: "Profil barbe plus installee, besoin soin rapide, net, non gras.",
-      items: ["beardOil", "beardCleanser", "scalpSerum", "freshMist"]
-    },
-    "35-44": {
-      title: "Densite racines, barbe douce, cure 30 jours",
-      why: "Profil sensible a densite percue, barbe plus dense, routine preventive.",
-      items: ["densitySerum", "collagenYeast", "beardOil", "freshMist"]
-    },
-    "45+": {
-      title: "Cuir chevelu confortable, barbe nourrie, entretien simple",
-      why: "Profil adapte a peau sous barbe, cheveux plus secs, cuir chevelu sensible.",
-      items: ["scalpSerum", "collagenYeast", "beardOil", "repairMask"]
-    }
+  "femme|25-34": {
+    gender: "femme",
+    age: "25-34",
+    need: "strong",
+    image: "assets/images/soin-flash-application.jpg",
+    alt: "Visuel Respire femme 25-34",
+    heroTitle: "Cuir chevelu equilibre, longueurs lumineuses.",
+    heroA: "Pour 25-34 ans : routine beaute complete qui combine cuir chevelu sain, longueurs nourries et eclat.",
+    heroB: "Une routine cheveux plus reguliere, plus sensorielle, pour garder equilibre et brillance au quotidien.",
+    diagnosticTitle: "Segment femme 25-34 : equilibre et eclat.",
+    diagnosticText: "Recommandation : serum cuir chevelu, masque longueurs, cure collagene/levure et protection urbaine.",
+    title: "Equilibre cuir chevelu, longueurs, eclat",
+    why: "25-34 : routine beaute plus installee, attente de resultats visibles, interet pour cure et protection.",
+    items: ["scalpSerum", "repairMask", "collagenYeast", "urbanShield"]
   },
-  "non-binaire": {
-    "18-24": {
-      title: "Fraicheur nomade, racines nettes",
-      why: "Profil choisi sans genre : recommandation basee sur age et usages quotidiens.",
-      items: ["freshMist", "scalpSerum", "urbanShield", "collagenYeast"]
-    },
-    "25-34": {
-      title: "Routine cuir chevelu + longueurs",
-      why: "Profil choisi sans genre : soin equilibre, naturel, adaptable.",
-      items: ["scalpSerum", "repairMask", "freshMist", "urbanShield"]
-    },
-    "35-44": {
-      title: "Densite, nutrition, protection",
-      why: "Profil choisi sans genre : routine preventive et entretien durable.",
-      items: ["densitySerum", "collagenYeast", "repairMask", "urbanShield"]
-    },
-    "45+": {
-      title: "Confort, douceur, routine reguliere",
-      why: "Profil choisi sans genre : soin cuir chevelu sensible et cheveux secs.",
-      items: ["scalpSerum", "collagenYeast", "repairMask", "densitySerum"]
-    }
+  "femme|35-44": {
+    gender: "femme",
+    age: "35-44",
+    need: "strong",
+    image: "assets/images/serum-boost-application.jpg",
+    alt: "Visuel Respire femme 35-44",
+    heroTitle: "Densite percue, racines tonifiees, cheveux proteges.",
+    heroA: "Pour 35-44 ans : routine densite qui cible cuir chevelu, nutrition et protection quotidienne.",
+    heroB: "Soin racines + cure 30 jours : approche preventive pour cheveux fatigues par stress, chaleur et pollution.",
+    diagnosticTitle: "Segment femme 35-44 : densite et prevention.",
+    diagnosticText: "Recommandation : serum densite, collagene + levure de biere, masque nutrition et serum cuir chevelu.",
+    title: "Densite, nutrition, protection quotidienne",
+    why: "35-44 : attention plus forte a densite percue, fatigue capillaire, nutrition et prevention.",
+    items: ["densitySerum", "collagenYeast", "repairMask", "scalpSerum"]
   },
-  "non-renseigne": {
-    "18-24": {
-      title: "Fraicheur nomade, racines nettes",
-      why: "Profil neutre : recommandation basee sur age et usages quotidiens.",
-      items: ["freshMist", "scalpSerum", "urbanShield", "collagenYeast"]
-    },
-    "25-34": {
-      title: "Routine cuir chevelu + longueurs",
-      why: "Profil neutre : soin equilibre, naturel, adaptable.",
-      items: ["scalpSerum", "repairMask", "freshMist", "urbanShield"]
-    },
-    "35-44": {
-      title: "Densite, nutrition, protection",
-      why: "Profil neutre : routine preventive et entretien durable.",
-      items: ["densitySerum", "collagenYeast", "repairMask", "urbanShield"]
-    },
-    "45+": {
-      title: "Confort, douceur, routine reguliere",
-      why: "Profil neutre : soin cuir chevelu sensible et cheveux secs.",
-      items: ["scalpSerum", "collagenYeast", "repairMask", "densitySerum"]
-    }
+  "femme|45+": {
+    gender: "femme",
+    age: "45+",
+    need: "strong",
+    image: "assets/images/serum-glow-packshot.jpg",
+    alt: "Visuel Respire femme 45 ans et plus",
+    heroTitle: "Confort racines, douceur longueurs, routine douce.",
+    heroA: "Pour 45 ans et plus : routine douce pour cuir chevelu sensible, cheveux plus secs et entretien regulier.",
+    heroB: "Des gestes naturels, doux et constants pour prendre soin du cuir chevelu et nourrir les longueurs.",
+    diagnosticTitle: "Segment femme 45+ : confort et nutrition.",
+    diagnosticText: "Recommandation : gel lavant doux, cure collagene/levure, masque reparateur et serum nuit.",
+    title: "Confort cuir chevelu, nutrition, routine douce",
+    why: "45+ : besoin de douceur, cuir chevelu plus sensible, cheveux plus secs, routine rassurante.",
+    items: ["soothingCleanser", "collagenYeast", "repairMask", "nightSerum"]
+  },
+  "homme|18-24": {
+    gender: "homme",
+    age: "18-24",
+    need: "fresh",
+    image: "assets/images/homme-barbe-soin.png",
+    alt: "Visuel Respire homme 18-24",
+    heroTitle: "Cheveux frais, racines nettes, zero prise de tete.",
+    heroA: "Pour 18-24 ans : routine anti-odeurs et racines nettes, adaptee sport, casquette, transports et sorties.",
+    heroB: "Moins d'odeurs, plus de propre : routine courte pour cheveux vite lourds et debut de barbe.",
+    diagnosticTitle: "Segment homme 18-24 : fraicheur et usage rapide.",
+    diagnosticText: "Recommandation : brume cheveux, serum cuir chevelu, nettoyant barbe/visage et spray anti-pollution.",
+    title: "Fraicheur, odeurs, racines nettes",
+    why: "18-24 : besoin pratique, prix accessible, odeurs post-sport/transport, routine courte.",
+    items: ["freshMist", "scalpSerum", "beardCleanser", "urbanShield"]
+  },
+  "homme|25-34": {
+    gender: "homme",
+    age: "25-34",
+    need: "soft",
+    image: "assets/images/homme-deodorant-application.png",
+    alt: "Visuel Respire homme 25-34",
+    heroTitle: "Barbe propre, cuir chevelu sain, routine bureau.",
+    heroA: "Pour 25-34 ans : routine nette et non grasse pour barbe, cuir chevelu et cheveux exposes au quotidien.",
+    heroB: "Une barbe plus douce et des racines plus propres, avec gestes rapides avant travail ou sortie.",
+    diagnosticTitle: "Segment homme 25-34 : barbe et cuir chevelu.",
+    diagnosticText: "Recommandation : huile barbe, nettoyant barbe/visage, serum cuir chevelu et brume cheveux.",
+    title: "Barbe propre, cuir chevelu sain, usage bureau",
+    why: "25-34 : barbe plus installee, attente de routine efficace, propre, discrete et rapide.",
+    items: ["beardOil", "beardCleanser", "scalpSerum", "freshMist"]
+  },
+  "homme|35-44": {
+    gender: "homme",
+    age: "35-44",
+    need: "strong",
+    image: "assets/images/deodorant-application.jpg",
+    alt: "Visuel Respire homme 35-44",
+    heroTitle: "Racines tonifiees, barbe nourrie, routine force.",
+    heroA: "Pour 35-44 ans : routine densite percue, cure 30 jours et soin barbe sans fini gras.",
+    heroB: "Cuir chevelu tonifie, barbe plus souple, cheveux entretenus : routine preventive simple.",
+    diagnosticTitle: "Segment homme 35-44 : densite et barbe.",
+    diagnosticText: "Recommandation : serum densite, collagene + levure de biere, huile barbe et baume barbe.",
+    title: "Densite racines, barbe douce, cure 30 jours",
+    why: "35-44 : besoin de prevention, densite percue, barbe plus dense, entretien regulier.",
+    items: ["densitySerum", "collagenYeast", "beardOil", "beardBalm"]
+  },
+  "homme|45+": {
+    gender: "homme",
+    age: "45+",
+    need: "soft",
+    image: "assets/images/duo-stop-boutons-packshot.jpg",
+    alt: "Visuel Respire homme 45 ans et plus",
+    heroTitle: "Cuir chevelu confortable, barbe nourrie, geste simple.",
+    heroA: "Pour 45 ans et plus : routine douce pour cuir chevelu sensible, barbe seche et cheveux plus exigeants.",
+    heroB: "Moins d'inconfort, plus de douceur : soin racines, barbe et longueurs avec gestes essentiels.",
+    diagnosticTitle: "Segment homme 45+ : confort et entretien.",
+    diagnosticText: "Recommandation : gel lavant doux, cure collagene/levure, baume barbe et masque reparateur.",
+    title: "Cuir chevelu confortable, barbe nourrie, entretien simple",
+    why: "45+ : besoin de confort, peau sous barbe, cheveux plus secs, routine courte et rassurante.",
+    items: ["soothingCleanser", "collagenYeast", "beardBalm", "repairMask"]
   }
 };
+
+function segmentKey(profile) {
+  return `${profile.gender}|${profile.age}`;
+}
+
+function getSegment(profile) {
+  return segments[segmentKey(profile)] || segments["femme|25-34"];
+}
 
 function getVariant(profile) {
   const params = new URLSearchParams(window.location.search);
@@ -314,59 +270,53 @@ function getVariant(profile) {
   if (forced === "A" || forced === "B") return forced;
   const stored = localStorage.getItem("respireABVariant");
   if (stored === "A" || stored === "B") return stored;
-  const seed = `${profile.age}-${profile.gender}-${profile.need}`.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0);
+  const seed = segmentKey(profile).split("").reduce((sum, char) => sum + char.charCodeAt(0), 0);
   const variant = seed % 2 === 0 ? "A" : "B";
   localStorage.setItem("respireABVariant", variant);
   return variant;
 }
 
 function applyPersonalization(profile) {
+  const segment = getSegment(profile);
   const variant = getVariant(profile);
-  const selectedCopy = copy[profile.need]?.[variant] || copy.fresh.A;
-  const visual = getVisualSegment(profile);
+  const selectedHero = variant === "A" ? segment.heroA : segment.heroB;
 
   personalNodes.forEach((node) => {
     const key = node.dataset.personal;
-    if (selectedCopy[key]) node.textContent = selectedCopy[key];
+    if (key === "heroTitle") node.textContent = segment.heroTitle;
+    if (key === "heroText") node.textContent = selectedHero;
+    if (key === "diagnosticTitle") node.textContent = segment.diagnosticTitle;
+    if (key === "diagnosticText") node.textContent = segment.diagnosticText;
   });
 
   needCards.forEach((card) => {
-    card.classList.toggle("is-active", card.dataset.needCard === profile.need);
+    card.classList.toggle("is-active", card.dataset.needCard === segment.need);
   });
 
   document.documentElement.dataset.ab = variant;
-  document.documentElement.dataset.need = profile.need;
+  document.documentElement.dataset.need = segment.need;
   document.documentElement.dataset.gender = profile.gender;
   document.documentElement.dataset.age = profile.age;
-  variantNote.textContent = `Variante ${variant} - ${needLabels[profile.need] || "routine personnalisee"}`;
+  variantNote.textContent = `Variante ${variant} - ${genderLabels[profile.gender]} ${ageLabels[profile.age]}`;
   profileChip.hidden = false;
-  profileChip.textContent = `${profile.age} - ${needLabels[profile.need] || "Diagnostic"}`;
-  updateSegmentImages(visual, profile);
-  updateRecommendations(profile);
+  profileChip.textContent = `${genderLabels[profile.gender]} ${profile.age}`;
+  updateSegmentImages(segment, profile);
+  updateRecommendations(segment, profile);
 }
 
-function getVisualSegment(profile) {
-  return visualSegments[profile.gender]?.[profile.age] || visualSegments["non-renseigne"]["25-34"];
-}
-
-function updateSegmentImages(visual, profile) {
+function updateSegmentImages(segment, profile) {
   segmentImages.forEach((image) => {
-    image.src = visual.src;
-    image.alt = visual.alt;
+    image.src = segment.image;
+    image.alt = segment.alt;
   });
-  imageSegment.textContent = `${genderLabels[profile.gender] || "Profil"} - ${ageLabels[profile.age] || "age"} - image testee`;
+  imageSegment.textContent = `${genderLabels[profile.gender]} - ${ageLabels[profile.age]} - visuel adapte`;
 }
 
-function getRecommendation(profile) {
-  return recommendationMatrix[profile.gender]?.[profile.age] || recommendationMatrix["non-renseigne"]["25-34"];
-}
+function updateRecommendations(segment, profile) {
+  selectedReco.querySelector("strong").textContent = `${genderLabels[profile.gender]} ${ageLabels[profile.age]} - ${segment.title}`;
+  selectedReco.querySelector("p").textContent = segment.why;
 
-function updateRecommendations(profile) {
-  const recommendation = getRecommendation(profile);
-  selectedReco.querySelector("strong").textContent = `${genderLabels[profile.gender]} ${ageLabels[profile.age]} - ${recommendation.title}`;
-  selectedReco.querySelector("p").textContent = recommendation.why;
-
-  recommendation.items.forEach((productKey, index) => {
+  segment.items.forEach((productKey, index) => {
     const product = products[productKey];
     const card = productCards[index];
     if (!product || !card) return;
@@ -380,13 +330,13 @@ function updateRecommendations(profile) {
 }
 
 function renderMatrix() {
-  matrixBody.innerHTML = Object.entries(recommendationMatrix)
-    .map(([gender, ages]) => {
+  matrixBody.innerHTML = Object.keys(genderLabels)
+    .map((gender) => {
       const cells = Object.keys(ageLabels)
         .map((age) => {
-          const reco = ages[age];
-          const titles = reco.items.map((key) => products[key].title).join(" + ");
-          return `<td><strong>${reco.title}</strong><span>${titles}</span></td>`;
+          const segment = segments[`${gender}|${age}`];
+          const titles = segment.items.map((key) => products[key].title).join(" + ");
+          return `<td><strong>${segment.title}</strong><span>${titles}</span></td>`;
         })
         .join("");
       return `<tr><td>${genderLabels[gender]}</td>${cells}</tr>`;
@@ -427,8 +377,8 @@ function track(eventName, detail = {}) {
   events.push({
     eventName,
     detail,
+    segment: detail.gender && detail.age ? segmentKey(detail) : null,
     variant: document.documentElement.dataset.ab,
-    need: document.documentElement.dataset.need,
     at: new Date().toISOString()
   });
   localStorage.setItem("respireEvents", JSON.stringify(events.slice(-50)));
@@ -438,32 +388,32 @@ function currentFormProfile() {
   const data = new FormData(form);
   return {
     gender: data.get("gender"),
-    age: data.get("age"),
-    need: data.get("need")
+    age: data.get("age")
   };
 }
 
 function updateLivePreview() {
   const profile = currentFormProfile();
-  const missing = !profile.gender || !profile.age || !profile.need;
+  const missing = !profile.gender || !profile.age;
   if (missing) {
     livePreview.querySelector("strong").textContent = "Completez votre profil";
-    livePreview.querySelector("p").textContent = "Votre page changera selon vos reponses.";
+    livePreview.querySelector("p").textContent = "Votre page changera selon votre sexe et votre tranche d'age.";
     return;
   }
+  localStorage.removeItem("respireABVariant");
+  const segment = getSegment(profile);
   const variant = getVariant(profile);
-  const selectedCopy = copy[profile.need]?.[variant] || copy.fresh.A;
-  const visual = getVisualSegment(profile);
-  livePreview.querySelector("strong").textContent = `${needLabels[profile.need]} - variante ${variant}`;
-  livePreview.querySelector("p").textContent = `${genderLabels[profile.gender]} ${ageLabels[profile.age]} : ${selectedCopy.heroText}`;
-  updateSegmentImages(visual, profile);
+  const selectedHero = variant === "A" ? segment.heroA : segment.heroB;
+  livePreview.querySelector("strong").textContent = `${genderLabels[profile.gender]} ${ageLabels[profile.age]} - variante ${variant}`;
+  livePreview.querySelector("p").textContent = selectedHero;
+  applyPersonalization(profile);
 }
 
 document.body.classList.add("is-locked");
 renderMatrix();
 
 const storedProfile = readStoredProfile();
-if (storedProfile?.gender && storedProfile?.age && storedProfile?.need) {
+if (storedProfile?.gender && storedProfile?.age) {
   applyPersonalization(storedProfile);
   gate.classList.add("is-hidden");
   document.body.classList.remove("is-locked");
@@ -474,7 +424,7 @@ if (storedProfile?.gender && storedProfile?.age && storedProfile?.need) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const profile = currentFormProfile();
-  if (!profile.gender || !profile.age || !profile.need) return;
+  if (!profile.gender || !profile.age) return;
   track("profile_submitted", profile);
   unlock(profile);
   showToast("Code RESPIRE10 active");
@@ -482,10 +432,8 @@ form.addEventListener("submit", (event) => {
 
 form.addEventListener("change", () => {
   const profile = currentFormProfile();
-  localStorage.removeItem("respireABVariant");
   updateLivePreview();
-  if (profile.gender && profile.age && profile.need) {
-    applyPersonalization(profile);
+  if (profile.gender && profile.age) {
     track("profile_previewed", profile);
   }
 });

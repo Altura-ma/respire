@@ -15,10 +15,14 @@ const matrixBody = document.querySelector("#matrix-body");
 const productCards = [...document.querySelectorAll("[data-product-card]")];
 const newsletterForm = document.querySelector("#newsletter-form");
 const newsletterStatus = document.querySelector("#newsletter-status");
+const catalogLinks = document.querySelector("#catalog-links");
 const cartPanel = document.querySelector("#panier");
 const cartLink = document.querySelector(".cart-link");
 const cartClose = document.querySelector("#cart-close");
 const cartBackdrop = document.querySelector(".cart-backdrop");
+const diagnosticModal = document.querySelector("#diagnostic-modal");
+const diagnosticClose = document.querySelector("#diagnostic-close");
+const diagnosticBackdrop = document.querySelector(".diagnostic-backdrop");
 
 let toastTimer;
 
@@ -35,8 +39,8 @@ const genderLabels = {
 };
 
 const needLabels = {
-  fresh: "Fraicheur racines",
-  strong: "Force & densite",
+  fresh: "Fraîcheur racines",
+  strong: "Force & densité",
   soft: "Douceur barbe"
 };
 
@@ -60,10 +64,10 @@ const segments = {
     need: "fresh",
     image: "assets/images/segments-final/femme-18-24.jpg",
     alt: "Visuel Respire femme 18-24",
-    heroTitle: "Racines fraiches, cheveux legers, routine rapide.",
-    heroA: "Pour 18-24 ans : routine cuir chevelu anti-odeurs, pensee pour sport, transports, soirees et cheveux vite lourds.",
-    heroB: "Racines propres plus longtemps : gestes simples pour garder cheveux frais entre deux lavages.",
-    diagnosticTitle: "Segment femme 18-24 : fraicheur et rythme intense.",
+    heroTitle: "Racines fraîches, cheveux légers, routine rapide.",
+    heroA: "Pour 18-24 ans : routine cuir chevelu anti-odeurs, pensée pour sport, transports, soirées et cheveux vite lourds.",
+    heroB: "Racines propres plus longtemps : gestes simples pour garder des cheveux frais entre deux lavages.",
+    diagnosticTitle: "Segment femme 18-24 : fraîcheur et rythme intense.",
     diagnosticText: "Routine recommandée : Pureté, Apaisement, Hydratant léger et Exfoliant-purifiant cuir chevelu.",
     title: "Fraicheur, racines grasses, routine rapide",
     why: "18-24 : besoin frequent de fraicheur immediate, format nomade, prix accessible, usage post-sport/transport.",
@@ -295,6 +299,22 @@ function setCartOpen(isOpen) {
   document.body.classList.toggle("cart-open", isOpen);
 }
 
+function setDiagnosticOpen(isOpen) {
+  diagnosticModal.classList.toggle("is-open", isOpen);
+  diagnosticModal.setAttribute("aria-hidden", String(!isOpen));
+  document.body.classList.toggle("diagnostic-open", isOpen);
+}
+
+document.querySelectorAll("[data-open-diagnostic]").forEach((element) => {
+  element.addEventListener("click", (event) => {
+    event.preventDefault();
+    setDiagnosticOpen(true);
+  });
+});
+
+diagnosticClose.addEventListener("click", () => setDiagnosticOpen(false));
+diagnosticBackdrop.addEventListener("click", () => setDiagnosticOpen(false));
+
 cartLink.addEventListener("click", (event) => {
   event.preventDefault();
   setCartOpen(true);
@@ -307,17 +327,14 @@ document.addEventListener("keydown", (event) => {
 });
 
 function renderMatrix() {
-  matrixBody.innerHTML = Object.keys(genderLabels)
-    .map((gender) => {
-      const cells = Object.keys(ageLabels)
-        .map((age) => {
-          const segment = segments[`${gender}|${age}`];
-          const titles = segment.items.map((key) => products[key].title).join(" + ");
-          return `<td><strong>${segment.title}</strong><span>${titles}</span></td>`;
-        })
-        .join("");
-      return `<tr><td>${genderLabels[gender]}</td>${cells}</tr>`;
-    })
+  matrixBody.innerHTML = Object.values(segments)
+    .map((segment) => `<article class="segment-card"><span>${genderLabels[segment.gender]} · ${ageLabels[segment.age]}</span><strong>${segment.title}</strong><p>${segment.items.map((key) => products[key].title).join(" · ")}</p></article>`)
+    .join("");
+}
+
+function renderCatalogLinks() {
+  catalogLinks.innerHTML = Object.entries(products)
+    .map(([key, product]) => `<a href="product.html?product=${key}">${product.title}<span>Voir la fiche →</span></a>`)
     .join("");
 }
 
@@ -390,6 +407,7 @@ function updateLivePreview() {
 
 document.body.classList.add("is-locked");
 renderMatrix();
+renderCatalogLinks();
 
 const storedProfile = readStoredProfile();
 if (storedProfile?.gender && storedProfile?.age) {

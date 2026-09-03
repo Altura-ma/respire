@@ -16,7 +16,7 @@
         <span>respire</span>
       </a>
       <nav class="main-nav" aria-label="Navigation principale">
-        <a href="#diagnostic-capillaire">Diagnostic</a>
+        <a href="#diagnostic-capillaire" data-open-diagnostic>Diagnostic</a>
         <a href="#routines">Routines</a>
         <a href="#produits">Produits</a>
         <a href="#preuves">Charte</a>
@@ -33,10 +33,10 @@
         <div class="hero-copy">
           <p class="eyebrow">Nouvelle gamme</p>
           <h1 id="hero-title" data-personal="heroTitle">Le cuir chevelu aussi a besoin de respirer.</h1>
-          <p class="hero-text" data-personal="heroText">Routine naturelle pour prendre soin du cuir chevelu, des racines, des longueurs et de la barbe, sans compromis sur la sensorialite.</p>
+          <p class="hero-text" data-personal="heroText">Routine naturelle pour prendre soin du cuir chevelu, des racines, des longueurs et de la barbe, sans compromis sur la sensorialité.</p>
           <div class="hero-actions">
             <a class="button button-dark" href="#produits">Decouvrir la gamme</a>
-            <a class="button button-light" href="#diagnostic-capillaire">Je fais mon diagnostic</a>
+            <a class="button button-light" href="#diagnostic-capillaire" data-open-diagnostic>Je fais mon diagnostic</a>
           </div>
           <p class="variant-note" id="variant-note" aria-live="polite">Sélection personnalisée après diagnostic.</p>
           <div class="hero-proof">
@@ -55,18 +55,18 @@
         <div class="scalp-copy">
           <p class="eyebrow">Cuir chevelu</p>
           <h2 id="scalp-title">Avant les cheveux, il y a la peau.</h2>
-          <p>Racines grasses, tiraillements, pellicules visibles, odeurs apres sport ou transports : le cuir chevelu vit les memes agressions que la peau du visage, mais reste souvent oublie.</p>
+          <p>Racines grasses, tiraillements, pellicules visibles, odeurs après sport ou transports : le cuir chevelu vit les mêmes agressions que la peau du visage, mais reste souvent oublié.</p>
         </div>
         <div class="scalp-points">
           <article>
             <span>01</span>
-            <h3>Reequilibrer</h3>
-            <p>Un serum leger aide a calmer l'inconfort et garder des racines nettes sans effet gras.</p>
+            <h3>Rééquilibrer</h3>
+            <p>Un sérum léger aide à apaiser l'inconfort et garder des racines nettes sans effet gras.</p>
           </article>
           <article>
             <span>02</span>
             <h3>Rafraichir</h3>
-            <p>Un shampoing adapté et un exfoliant ponctuel aident à garder racines propres et légères.</p>
+            <p>Un shampoing adapté et un exfoliant ponctuel aident à garder des racines propres et légères.</p>
           </article>
           <article>
             <span>03</span>
@@ -93,8 +93,13 @@
           <h2 id="fillout-title">Trouvez les soins adaptés à vos cheveux.</h2>
           <p class="fillout-intro">Répondez au diagnostic capillaire pour recevoir une sélection selon vos besoins.</p>
         </div>
-        <div class="fillout-frame">
-          <iframe src="https://brkqevpp4d.zite.so/" title="Diagnostic capillaire Respire" loading="lazy"></iframe>
+        <div class="diagnostic-launch">
+          <div>
+            <span class="diagnostic-step">5 questions · 2 minutes</span>
+            <strong>Une routine pensée pour votre cuir chevelu.</strong>
+            <p>Votre sélection tient compte de vos habitudes, de votre âge et de votre sexe.</p>
+          </div>
+          <button class="button button-dark" type="button" data-open-diagnostic>Je fais mon diagnostic</button>
         </div>
       </section>
 
@@ -108,20 +113,10 @@
           <strong>Diagnostic en attente</strong>
           <p>Votre profil modifie visuel, promesse et produits recommandés.</p>
         </div>
-        <div class="matrix-wrap">
-          <table class="segment-table">
-            <thead>
-              <tr>
-                <th>Sexe</th>
-                <th>18-24</th>
-                <th>25-34</th>
-                <th>35-44</th>
-                <th>45+</th>
-              </tr>
-            </thead>
-            <tbody id="matrix-body"></tbody>
-          </table>
-        </div>
+        <details class="logic-details">
+          <summary>Voir la logique des profils</summary>
+          <div class="matrix-wrap" id="matrix-body"></div>
+        </details>
       </section>
 
       <section class="routine-grid" id="routines" aria-label="Routines personnalisées">
@@ -144,8 +139,8 @@
 
       <section class="product-section" id="produits">
         <div class="section-heading">
-          <p class="eyebrow">Selection</p>
-          <h2>Une gamme complete, de la racine aux longueurs.</h2>
+          <p class="eyebrow">Sélection</p>
+          <h2>Une sélection complète, de la racine aux longueurs.</h2>
         </div>
 
         <div class="products">
@@ -154,6 +149,7 @@
           <article class="product-card" data-product-card="2"><div class="product-image"><img data-product-image src="assets/images/concept-products/shampoing-apaisement.png" alt="Shampoing Respire Apaisement vert"><span class="badge" data-product-badge>Apaisement</span></div><div class="product-info"><p class="stars">Pré-lancement · nouvelle gamme</p><h3 data-product-title>Shampoing Apaisement</h3><p data-product-desc>Nettoie en douceur les cuirs chevelus sujets aux tiraillements et inconforts.</p><p class="product-meta" data-product-meta>250 ml · Avoine + panthénol · À chaque lavage</p><div class="price-row"><strong data-product-price>14,90€</strong><button type="button" data-track="add">Ajouter</button></div></div></article>
           <article class="product-card" data-product-card="3"><div class="product-image"><img data-product-image src="assets/images/concept-products/shampoing-reparation.png" alt="Shampoing Respire Réparation rouge"><span class="badge" data-product-badge>Souplesse</span></div><div class="product-info"><p class="stars">Pré-lancement · nouvelle gamme</p><h3 data-product-title>Shampoing Réparation</h3><p data-product-desc>Nettoie les cheveux abîmés et prépare les longueurs au soin réparateur.</p><p class="product-meta" data-product-meta>250 ml · Protéines végétales + huile de coco · 2 à 3 fois par semaine</p><div class="price-row"><strong data-product-price>15,90€</strong><button type="button" data-track="add">Ajouter</button></div></div></article>
         </div>
+        <div class="catalog-links" id="catalog-links" aria-label="Les 10 fiches produit"></div>
       </section>
 
       <section class="proof-section" id="preuves">
@@ -223,6 +219,22 @@
         <p class="cart-note">Pré-lancement : panier de démonstration, paiement non connecté.</p>
       </div>
     </aside>
+
+    <div class="diagnostic-modal" id="diagnostic-modal" aria-hidden="true">
+      <button class="diagnostic-backdrop" type="button" aria-label="Fermer le diagnostic"></button>
+      <section class="diagnostic-dialog" role="dialog" aria-modal="true" aria-labelledby="diagnostic-modal-title">
+        <div class="diagnostic-dialog-head">
+          <div>
+            <p class="eyebrow">Diagnostic capillaire</p>
+            <h2 id="diagnostic-modal-title">Trouvez votre routine.</h2>
+          </div>
+          <button class="diagnostic-close" id="diagnostic-close" type="button" title="Fermer le diagnostic" aria-label="Fermer le diagnostic">×</button>
+        </div>
+        <div class="diagnostic-frame">
+          <iframe src="https://brkqevpp4d.zite.so/" title="Diagnostic capillaire Respire"></iframe>
+        </div>
+      </section>
+    </div>
 
     <div class="profile-gate" id="profile-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
       <div class="gate-panel">

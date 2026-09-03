@@ -3,15 +3,11 @@ const form = document.querySelector("#profile-form");
 const coupon = document.querySelector("#coupon");
 const personalNodes = document.querySelectorAll("[data-personal]");
 const needCards = document.querySelectorAll("[data-need-card]");
-const livePreview = document.querySelector("#live-preview");
-const profileChip = document.querySelector("#profile-chip");
 const resetProfile = document.querySelector("#reset-profile");
-const variantNote = document.querySelector("#variant-note");
 const toast = document.querySelector("#toast");
 const segmentImages = document.querySelectorAll("[data-segment-image]");
 const imageSegment = document.querySelector("#image-segment");
 const selectedReco = document.querySelector("#selected-reco");
-const matrixBody = document.querySelector("#matrix-body");
 const productCards = [...document.querySelectorAll("[data-product-card]")];
 const newsletterForm = document.querySelector("#newsletter-form");
 const newsletterStatus = document.querySelector("#newsletter-status");
@@ -124,7 +120,7 @@ const segments = {
     need: "fresh",
     image: "assets/images/segments-final/homme-18-24.jpg",
     alt: "Visuel Respire homme 18-24",
-    heroTitle: "Cheveux frais, racines nettes, zero prise de tete.",
+    heroTitle: "Cheveux frais, racines nettes, zéro prise de tête.",
     heroA: "Routine anti-odeurs et racines nettes, adaptée au sport, à la casquette, aux transports et aux sorties.",
     heroB: "Moins d'odeurs, plus de propre : routine courte pour cheveux vite lourds et debut de barbe.",
     diagnosticTitle: "Fraîcheur et usage rapide.",
@@ -221,9 +217,6 @@ function applyPersonalization(profile) {
   document.documentElement.dataset.need = segment.need;
   document.documentElement.dataset.gender = profile.gender;
   document.documentElement.dataset.age = profile.age;
-  variantNote.textContent = "Sélection personnalisée pour votre routine";
-  profileChip.hidden = false;
-  profileChip.textContent = `${genderLabels[profile.gender]} ${profile.age}`;
   updateSegmentImages(segment, profile);
   updateRecommendations(segment, profile);
 }
@@ -326,12 +319,6 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setCartOpen(false);
 });
 
-function renderMatrix() {
-  matrixBody.innerHTML = Object.values(segments)
-    .map((segment) => `<article class="segment-card"><span>Routine proposée</span><strong>${segment.title}</strong><p>${segment.items.map((key) => products[key].title).join(" · ")}</p></article>`)
-    .join("");
-}
-
 function renderCatalogLinks() {
   catalogLinks.innerHTML = Object.entries(products)
     .map(([key, product]) => `<a href="product.html?product=${key}">${product.title}<span>Voir la fiche →</span></a>`)
@@ -384,30 +371,12 @@ function currentFormProfile() {
   const data = new FormData(form);
   return {
     gender: data.get("gender"),
-    age: data.get("age")
+    age: data.get("age"),
+    email: data.get("email")
   };
 }
 
-function updateLivePreview() {
-  if (!livePreview) return;
-  const profile = currentFormProfile();
-  const missing = !profile.gender || !profile.age;
-  if (missing) {
-    livePreview.querySelector("strong").textContent = "Completez votre profil";
-    livePreview.querySelector("p").textContent = "Votre page changera selon votre sexe et votre tranche d'age.";
-    return;
-  }
-  localStorage.removeItem("respireABVariant");
-  const segment = getSegment(profile);
-  const variant = getVariant(profile);
-  const selectedHero = variant === "A" ? segment.heroA : segment.heroB;
-  livePreview.querySelector("strong").textContent = "Routine personnalisée";
-  livePreview.querySelector("p").textContent = "Une routine adaptée à vos besoins.";
-  applyPersonalization(profile);
-}
-
 document.body.classList.add("is-locked");
-renderMatrix();
 renderCatalogLinks();
 
 gate.addEventListener("click", (event) => {
@@ -428,7 +397,7 @@ if (storedProfile?.gender && storedProfile?.age) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const profile = currentFormProfile();
-  if (!profile.gender || !profile.age) return;
+  if (!profile.gender || !profile.age || !profile.email) return;
   track("profile_submitted", profile);
   unlock(profile);
   showToast("Code RESPIRE10 active");
@@ -443,16 +412,9 @@ form.querySelector(".gate-submit").addEventListener("click", (event) => {
 
 form.addEventListener("change", () => {
   const profile = currentFormProfile();
-  updateLivePreview();
   if (profile.gender && profile.age) {
     track("profile_previewed", profile);
   }
-});
-
-profileChip.addEventListener("click", () => {
-  gate.classList.remove("is-hidden");
-  document.body.classList.add("is-locked");
-  showToast("Diagnostic rouvert");
 });
 
 resetProfile.addEventListener("click", () => {
@@ -462,11 +424,10 @@ resetProfile.addEventListener("click", () => {
   form.reset();
   form.querySelector(".gate-submit").disabled = false;
   form.querySelector(".gate-submit").type = "submit";
-  form.querySelector(".gate-submit").textContent = "RECUPERER MA REDUCTION";
+  form.querySelector(".gate-submit").textContent = "RÉCUPÉRER MA RÉDUCTION";
   delete form.querySelector(".gate-submit").dataset.unlocked;
   form.querySelector(".gate-submit").removeAttribute("aria-label");
   coupon.hidden = true;
-  updateLivePreview();
   gate.classList.remove("is-hidden");
   document.body.classList.add("is-locked");
   track("profile_reset");
@@ -487,11 +448,13 @@ document.querySelectorAll("a[href^='#'], [data-track]").forEach((element) => {
 
 renderCart();
 
+if (window.location.hash === "#panier") setCartOpen(true);
+
 newsletterForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const email = new FormData(newsletterForm).get("email");
   localStorage.setItem("respireNewsletterEmail", email);
-  newsletterStatus.textContent = "Inscription confirmée. À bientôt.";
+  newsletterStatus.textContent = "Inscription confirmée.";
   newsletterForm.reset();
   track("newsletter_submitted");
 });

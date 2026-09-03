@@ -1374,6 +1374,7 @@ h3 {
   text-transform: uppercase;
 }
 
+.gate-form input,
 .gate-form select {
   width: 100%;
   min-height: 52px;

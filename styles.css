@@ -135,15 +135,17 @@ select {
 }
 
 .header-cta {
-  min-width: 92px;
   min-height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
   background: var(--ink);
   color: #fff;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .header-actions {
@@ -1636,9 +1638,9 @@ h3 {
   }
 
   .header-cta {
-    min-width: 74px;
     min-height: 38px;
-    font-size: 12px;
+    padding: 0 14px;
+    font-size: 11px;
   }
 
   .profile-chip {

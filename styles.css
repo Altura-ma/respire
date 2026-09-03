@@ -483,6 +483,15 @@ h3 {
   font-size: 18px;
 }
 
+.routine-add {
+  margin-top: 22px;
+}
+
+.routine-add:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .matrix-wrap {
   overflow: hidden;
 }
@@ -625,6 +634,7 @@ h3 {
   position: relative;
   aspect-ratio: 4 / 5;
   background: var(--soft);
+  overflow: hidden;
 }
 
 .product-image img {

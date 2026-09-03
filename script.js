@@ -8,6 +8,7 @@ const toast = document.querySelector("#toast");
 const segmentImages = document.querySelectorAll("[data-segment-image]");
 const imageSegment = document.querySelector("#image-segment");
 const selectedReco = document.querySelector("#selected-reco");
+const addRoutineButton = document.querySelector("#add-routine");
 const productCards = [...document.querySelectorAll("[data-product-card]")];
 const newsletterForm = document.querySelector("#newsletter-form");
 const newsletterStatus = document.querySelector("#newsletter-status");
@@ -21,6 +22,7 @@ const diagnosticClose = document.querySelector("#diagnostic-close");
 const diagnosticBackdrop = document.querySelector(".diagnostic-backdrop");
 
 let toastTimer;
+let currentRecommendationKeys = [];
 
 const ageLabels = {
   "18-24": "18-24 ans",
@@ -230,6 +232,8 @@ function updateSegmentImages(segment, profile) {
 }
 
 function updateRecommendations(segment, profile) {
+  currentRecommendationKeys = segment.items.filter((productKey) => products[productKey]);
+  addRoutineButton.disabled = currentRecommendationKeys.length === 0;
   selectedReco.querySelector("strong").textContent = segment.title;
   selectedReco.querySelector("p").textContent = segment.why;
 
@@ -324,6 +328,12 @@ function renderCatalogLinks() {
     .map(([key, product]) => `<a href="product.html?product=${key}">${product.title}<span>Voir la fiche →</span></a>`)
     .join("");
 }
+
+addRoutineButton.addEventListener("click", () => {
+  currentRecommendationKeys.forEach((productKey) => addToCart(productKey));
+  setCartOpen(true);
+  showToast("Routine ajoutée au panier");
+});
 
 function unlock(profile) {
   localStorage.setItem("respireProfile", JSON.stringify(profile));
@@ -448,7 +458,19 @@ document.querySelectorAll("a[href^='#'], [data-track]").forEach((element) => {
 
 renderCart();
 
-if (window.location.hash === "#panier") setCartOpen(true);
+const addParam = new URLSearchParams(window.location.search).get("add");
+const addProductKeys = (addParam || "")
+  .split(",")
+  .map((key) => key.trim())
+  .filter((key) => products[key]);
+
+if (addProductKeys.length) {
+  addProductKeys.forEach((productKey) => addToCart(productKey));
+  setCartOpen(true);
+  window.history.replaceState({}, "", `${window.location.pathname}#panier`);
+} else if (window.location.hash === "#panier") {
+  setCartOpen(true);
+}
 
 newsletterForm.addEventListener("submit", (event) => {
   event.preventDefault();

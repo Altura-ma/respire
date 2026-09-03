@@ -251,7 +251,7 @@ function updateRecommendations(segment, profile) {
     card.querySelector("[data-product-desc]").textContent = product.desc;
     card.querySelector("[data-product-meta]").textContent = `${product.format} · ${product.ingredients} · ${product.usage}`;
     card.querySelector("[data-product-price]").textContent = product.price;
-    card.querySelector("[data-track='add']").textContent = "Ajouter à ma routine";
+    card.querySelector("[data-track='add']").textContent = "Ajouter";
     card.querySelector("[data-track='add']").dataset.productKey = productKey;
     let productLink = card.querySelector("[data-product-link]");
     if (!productLink) {

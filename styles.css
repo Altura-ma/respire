@@ -1092,40 +1092,41 @@ h3 {
 
 .gate-panel {
   width: min(1160px, 100%);
-  min-height: min(650px, calc(100vh - 48px));
-  max-height: calc(100vh - 48px);
+  height: min(760px, calc(100vh - 32px));
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(340px, 0.9fr) minmax(420px, 1.1fr);
   background: #fff;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
-  overflow: auto;
+  overflow: hidden;
 }
 
 .gate-image {
-  min-height: 520px;
+  min-height: 0;
 }
 
 .gate-form {
-  padding: clamp(28px, 5vw, 64px);
+  min-width: 0;
+  overflow-y: auto;
+  padding: 24px clamp(28px, 4vw, 58px);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .gate-form h2 {
-  margin-bottom: 22px;
-  font-size: clamp(42px, 5vw, 78px);
+  margin-bottom: 16px;
+  font-size: clamp(42px, 4.1vw, 60px);
 }
 
 .gate-form > p:not(.eyebrow) {
-  margin-bottom: 26px;
-  font-size: 24px;
+  margin-bottom: 20px;
+  font-size: clamp(18px, 2vw, 24px);
 }
 
 .gate-form label {
   display: grid;
   gap: 8px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   color: var(--muted);
   font-size: 13px;
   font-weight: 900;
@@ -1134,7 +1135,7 @@ h3 {
 
 .gate-form select {
   width: 100%;
-  min-height: 58px;
+  min-height: 52px;
   padding: 0 16px;
   border: 1px solid #9ca3af;
   border-radius: 0;
@@ -1144,15 +1145,15 @@ h3 {
 }
 
 .live-preview {
-  margin: 4px 0 14px;
-  padding: 16px;
+  margin: 2px 0 10px;
+  padding: 10px 16px;
   border: 1px solid var(--line);
   background: var(--soft);
 }
 
 .live-preview span {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: var(--accent);
   font-size: 11px;
   font-weight: 900;
@@ -1161,8 +1162,8 @@ h3 {
 
 .live-preview strong {
   display: block;
-  margin-bottom: 6px;
-  font-size: 20px;
+  margin-bottom: 4px;
+  font-size: 18px;
   font-weight: 900;
 }
 
@@ -1177,8 +1178,8 @@ h3 {
 }
 
 .coupon {
-  margin-top: 18px;
-  padding: 18px;
+  margin-top: 12px;
+  padding: 14px 18px;
   border: 1px solid var(--ink);
   background: var(--soft);
 }
@@ -1194,7 +1195,7 @@ h3 {
 .coupon strong {
   display: block;
   margin-top: 6px;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 900;
 }
 

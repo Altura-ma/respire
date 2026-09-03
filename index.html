@@ -213,11 +213,15 @@
       </div>
     </footer>
 
-    <aside class="cart-panel" id="panier" aria-labelledby="cart-title">
-      <div class="cart-heading"><div><p class="eyebrow">Votre sélection</p><h2 id="cart-title">Panier</h2></div><strong><span id="cart-count">0</span> article(s)</strong></div>
-      <div id="cart-items"><p>Votre panier est vide.</p></div>
-      <div class="cart-total"><span>Total indicatif</span><strong id="cart-total">0,00€</strong></div>
-      <p class="cart-note">Pré-lancement : panier de démonstration, paiement non connecté.</p>
+    <aside class="cart-panel" id="panier" aria-labelledby="cart-title" aria-hidden="true">
+      <button class="cart-backdrop" type="button" aria-label="Fermer le panier"></button>
+      <div class="cart-sheet">
+        <div class="cart-heading"><div><p class="eyebrow">Votre sélection</p><h2 id="cart-title">Panier</h2></div><button class="cart-close" id="cart-close" type="button" title="Fermer le panier" aria-label="Fermer le panier">×</button></div>
+        <div class="cart-count"><strong><span id="cart-count">0</span> article(s)</strong></div>
+        <div id="cart-items"><p>Votre panier est vide.</p></div>
+        <div class="cart-total"><span>Total indicatif</span><strong id="cart-total">0,00€</strong></div>
+        <p class="cart-note">Pré-lancement : panier de démonstration, paiement non connecté.</p>
+      </div>
     </aside>
 
     <div class="profile-gate" id="profile-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">

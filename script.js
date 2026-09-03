@@ -15,6 +15,10 @@ const matrixBody = document.querySelector("#matrix-body");
 const productCards = [...document.querySelectorAll("[data-product-card]")];
 const newsletterForm = document.querySelector("#newsletter-form");
 const newsletterStatus = document.querySelector("#newsletter-status");
+const cartPanel = document.querySelector("#panier");
+const cartLink = document.querySelector(".cart-link");
+const cartClose = document.querySelector("#cart-close");
+const cartBackdrop = document.querySelector(".cart-backdrop");
 
 let toastTimer;
 
@@ -284,6 +288,23 @@ function addToCart(productKey) {
   localStorage.setItem("respireCart", JSON.stringify(cart));
   renderCart();
 }
+
+function setCartOpen(isOpen) {
+  cartPanel.classList.toggle("is-open", isOpen);
+  cartPanel.setAttribute("aria-hidden", String(!isOpen));
+  document.body.classList.toggle("cart-open", isOpen);
+}
+
+cartLink.addEventListener("click", (event) => {
+  event.preventDefault();
+  setCartOpen(true);
+});
+
+cartClose.addEventListener("click", () => setCartOpen(false));
+cartBackdrop.addEventListener("click", () => setCartOpen(false));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setCartOpen(false);
+});
 
 function renderMatrix() {
   matrixBody.innerHTML = Object.keys(genderLabels)

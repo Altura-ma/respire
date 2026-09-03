@@ -603,6 +603,12 @@ h3 {
   text-transform: uppercase;
 }
 
+.gate-submit:disabled {
+  cursor: default;
+  background: #287a58;
+  border-color: #287a58;
+}
+
 .proof-section {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.7fr);

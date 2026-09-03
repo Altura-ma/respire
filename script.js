@@ -264,10 +264,14 @@ function unlock(profile) {
   localStorage.setItem("respireCoupon", "RESPIRE10");
   applyPersonalization(profile);
   coupon.hidden = false;
+  coupon.querySelector("strong").textContent = "RESPIRE10";
+  form.querySelector(".gate-submit").textContent = "CODE ACTIVE : RESPIRE10";
+  form.querySelector(".gate-submit").disabled = true;
+  form.querySelector(".gate-submit").setAttribute("aria-label", "Code RESPIRE10 activé");
   setTimeout(() => {
     gate.classList.add("is-hidden");
     document.body.classList.remove("is-locked");
-  }, 950);
+  }, 2800);
 }
 
 function showToast(message) {
@@ -364,6 +368,10 @@ resetProfile.addEventListener("click", () => {
   localStorage.removeItem("respireABVariant");
   localStorage.removeItem("respireCoupon");
   form.reset();
+  form.querySelector(".gate-submit").disabled = false;
+  form.querySelector(".gate-submit").textContent = "RECUPERER MA REDUCTION";
+  form.querySelector(".gate-submit").removeAttribute("aria-label");
+  coupon.hidden = true;
   updateLivePreview();
   gate.classList.remove("is-hidden");
   document.body.classList.add("is-locked");

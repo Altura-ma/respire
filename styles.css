@@ -1353,6 +1353,11 @@ h3 {
 
 .gate-image {
   min-height: 0;
+  overflow: hidden;
+}
+
+.gate-image img {
+  object-fit: cover;
 }
 
 .gate-form {

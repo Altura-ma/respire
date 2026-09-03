@@ -97,7 +97,6 @@ detail.querySelectorAll(".product-thumb-rail button").forEach((button) => {
     if (type === "video") {
       videoEl.hidden = false;
       videoEl.load();
-      videoEl.currentTime = 0;
       videoEl
         .play()
         .then(() => {

@@ -242,23 +242,31 @@ function updateRecommendations(segment, profile) {
     if (!product || !card) return;
     card.querySelector("[data-product-image]").src = product.image;
     card.querySelector("[data-product-image]").alt = product.alt;
+    card.querySelector("[data-product-hover-image]").src = lifestyleImageFor(productKey);
     card.querySelector("[data-product-badge]").textContent = product.badge;
     card.querySelector("[data-product-title]").textContent = product.title;
     card.querySelector("[data-product-desc]").textContent = product.desc;
-    card.querySelector("[data-product-meta]").textContent = `${product.format} · ${product.ingredients} · ${product.usage}`;
+    card.querySelector("[data-product-meta]").textContent = product.ingredients;
     card.querySelector("[data-product-price]").textContent = product.price;
-    card.querySelector("[data-track='add']").textContent = "Ajouter";
-    card.querySelector("[data-track='add']").dataset.productKey = productKey;
-    let productLink = card.querySelector("[data-product-link]");
-    if (!productLink) {
-      productLink = document.createElement("a");
-      productLink.dataset.productLink = "true";
-      productLink.className = "product-link";
-      productLink.textContent = "Voir la fiche produit";
-      card.querySelector("[data-product-title]").after(productLink);
-    }
-    productLink.href = `product.html?product=${productKey}`;
+    card.querySelectorAll("[data-track='add']").forEach((button) => {
+      button.textContent = "Ajouter";
+      button.dataset.productKey = productKey;
+    });
+    card.querySelector("[data-product-link]").href = `product.html?product=${productKey}`;
   });
+}
+
+function lifestyleImageFor(productKey) {
+  if (productKey.includes("Purete") || productKey.includes("Apaisement") || productKey.includes("Scalp")) {
+    return "assets/images/product-lifestyle/cuir-chevelu.png";
+  }
+  if (productKey.includes("Reparation") || productKey.includes("Repair") || productKey.includes("Nourrissant")) {
+    return "assets/images/product-lifestyle/reparation.png";
+  }
+  if (productKey === "forceVitalite") {
+    return "assets/images/product-lifestyle/force-vitalite.png";
+  }
+  return "assets/images/product-lifestyle/hydratation.png";
 }
 
 function readCart() {

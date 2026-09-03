@@ -60,7 +60,7 @@ const segments = {
     gender: "femme",
     age: "18-24",
     need: "fresh",
-    image: "assets/images/segments-clean/femme-18-24.jpg",
+    image: "assets/images/segments-final/femme-18-24.jpg",
     alt: "Visuel Respire femme 18-24",
     heroTitle: "Racines fraîches, cheveux légers, routine rapide.",
     heroA: "Routine cuir chevelu anti-odeurs, pensée pour sport, transports, soirées et cheveux vite lourds.",

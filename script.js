@@ -35,102 +35,16 @@ const needLabels = {
 };
 
 const products = {
-  deodorantStick: {
-    badge: "Iconique",
-    title: "Déodorant stick Fleur de Coton",
-    desc: "Format stick Respire, usage quotidien, frais et pratique pour profils actifs.",
-    price: "11.90€",
-    image: "assets/images/real-products/deodorant-stick.jpg",
-    alt: "Déodorant Stick Respire Fleur de Coton"
-  },
-  brumeSolaire: {
-    badge: "Nomade",
-    title: "Brume Solaire Protection Urbaine",
-    desc: "Protection facile à réappliquer, adaptée ville, sorties et routine rapide.",
-    price: "16.90€",
-    image: "assets/images/real-products/brume-solaire-spf50.jpg",
-    alt: "Brume Solaire Protection Urbaine SPF50 Respire"
-  },
-  routineImperfections: {
-    badge: "Routine",
-    title: "Routine SOS Imperfections",
-    desc: "Routine complète pour peau nette, utile quand rythme, sport et stress marquent le visage.",
-    price: "56.60€",
-    image: "assets/images/real-products/routine-sos-imperfections.jpg",
-    alt: "Routine SOS Imperfections Respire"
-  },
-  serumGlow: {
-    badge: "Éclat",
-    title: "Sérum Glow & Protect",
-    desc: "Sérum vitamine C SPF30 pour éclat, protection et bonne mine quotidienne.",
-    price: "27.90€",
-    image: "assets/images/real-products/serum-glow-protect.jpg",
-    alt: "Sérum Glow & Protect Respire"
-  },
-  huileDemaquillante: {
-    badge: "Doux",
-    title: "Huile Lactée Démaquillante",
-    desc: "Nettoyage doux, peau nette et confortable, bon socle routine visage.",
-    price: "17.90€",
-    image: "assets/images/real-products/huile-lactee-demaquillante.jpg",
-    alt: "Huile Lactée Démaquillante Respire"
-  },
-  soinLevres: {
-    badge: "Collagène",
-    title: "Soin Lèvres Collagène Booster",
-    desc: "Soin lèvres SPF aux peptides, logique collagène déjà crédible dans univers Respire.",
-    price: "19.90€",
-    image: "assets/images/real-products/soin-levres-collagene-booster.jpg",
-    alt: "Soin Lèvres Collagène Booster Respire"
-  },
-  duoBonneMine: {
-    badge: "Bundle",
-    title: "Duo SOS Bonne Mine",
-    desc: "Sérum glow + stick regard : réponse fatigue, teint terne et routine visible.",
-    price: "42.95€",
-    image: "assets/images/real-products/duo-sos-bonne-mine.jpg",
-    alt: "Duo SOS Bonne Mine Respire"
-  },
-  stickSolaire: {
-    badge: "SPF50+",
-    title: "Stick Solaire Matifiant SPF50+",
-    desc: "Protection solaire invisible et matifiante, utile en ville et au quotidien.",
-    price: "13.90€",
-    image: "assets/images/real-products/stick-solaire-spf50.jpg",
-    alt: "Stick Solaire Matifiant SPF50+ Respire"
-  },
-  duoHydratation: {
-    badge: "Hydratation",
-    title: "Duo Protection & Hydratation Quotidienne",
-    desc: "Duo soin + protection pour peau plus exigeante, confort et prévention.",
-    price: "39.70€",
-    image: "assets/images/real-products/duo-protection-hydratation.jpg",
-    alt: "Duo Protection & Hydratation Quotidienne Respire"
-  },
-  nettoyantStick: {
-    badge: "Nettoyant",
-    title: "Soin Nettoyant Visage stick",
-    desc: "Stick nettoyant doux et pratique, cohérent avec routine barbe/visage rapide.",
-    price: "13.90€",
-    image: "assets/images/real-products/soin-nettoyant-visage-stick.jpg",
-    alt: "Soin Nettoyant Visage stick Respire"
-  },
-  duoJourneeEte: {
-    badge: "Outdoor",
-    title: "Duo Journée d’Été",
-    desc: "Déodorant + protection solaire, logique chaleur, transpiration et cheveux exposés.",
-    price: "34.80€",
-    image: "assets/images/real-products/duo-journee-ete.jpg",
-    alt: "Duo Journée d’Été Respire"
-  },
-  stickRegard: {
-    badge: "Fraîcheur",
-    title: "Stick Fraîcheur Regard",
-    desc: "Geste frais à la vitamine C pour profils qui cherchent effet défatiguant rapide.",
-    price: "19.90€",
-    image: "assets/images/real-products/stick-fraicheur-regard.jpg",
-    alt: "Stick Fraîcheur Regard Respire"
-  }
+  shampoingEquilibre: { badge: "Hydratation", title: "Shampoing Équilibre", desc: "Nettoie les racines sans les dessécher et aide à garder une sensation fraîche.", price: "14,90€", format: "250 ml", ingredients: "Prébiotiques + aloe vera", usage: "2 à 3 fois par semaine", image: "assets/images/concept-products/shampoing-equilibre.png", alt: "Shampoing Respire Équilibre bleu" },
+  shampoingPurete: { badge: "Purifiant", title: "Shampoing Pureté", desc: "Nettoie les racines qui regraissent vite et laisse le cuir chevelu léger.", price: "14,90€", format: "250 ml", ingredients: "Argile verte + zinc", usage: "2 fois par semaine", image: "assets/images/concept-products/shampoing-purete.png", alt: "Shampoing Respire Pureté vert" },
+  shampoingApaisement: { badge: "Cuir chevelu", title: "Shampoing Apaisement", desc: "Nettoie en douceur les cuirs chevelus sujets aux tiraillements et inconforts.", price: "14,90€", format: "250 ml", ingredients: "Avoine + panthénol", usage: "À chaque lavage", image: "assets/images/concept-products/shampoing-apaisement.png", alt: "Shampoing Respire Apaisement vert" },
+  shampoingReparation: { badge: "Souplesse", title: "Shampoing Réparation", desc: "Nettoie les cheveux abîmés et prépare les longueurs au soin réparateur.", price: "15,90€", format: "250 ml", ingredients: "Protéines végétales + huile de coco", usage: "2 à 3 fois par semaine", image: "assets/images/concept-products/shampoing-reparation.png", alt: "Shampoing Respire Réparation rouge" },
+  apresHydratant: { badge: "Hydratation", title: "Après-shampoing Hydratant léger", desc: "Démêle sans alourdir et apporte douceur aux longueurs et pointes.", price: "15,90€", format: "200 ml", ingredients: "Acide hyaluronique + aloe vera", usage: "Après chaque shampoing", image: "assets/images/concept-products/apres-shampoing-hydratant-leger.png", alt: "Après-shampoing Respire Hydratant léger bleu" },
+  apresNourrissant: { badge: "Réparation", title: "Après-shampoing Nourrissant-réparateur", desc: "Nourrit les longueurs sèches et aide à retrouver une fibre plus souple.", price: "16,90€", format: "200 ml", ingredients: "Beurre de karité + protéines végétales", usage: "Après chaque shampoing", image: "assets/images/concept-products/apres-shampoing-nourrissant-reparateur.png", alt: "Après-shampoing Respire Nourrissant-réparateur rouge" },
+  serumScalp: { badge: "Apaisement", title: "Sérum cuir chevelu apaisant", desc: "Soin ciblé sans rinçage pour calmer la sensation d'inconfort et hydrater les racines.", price: "22,90€", format: "30 ml", ingredients: "Niacinamide + panthénol", usage: "Quelques gouttes le soir, 3 fois par semaine", image: "assets/images/concept-products/serum-cuir-chevelu-apaisant.png", alt: "Sérum Respire cuir chevelu apaisant vert" },
+  exfoliantScalp: { badge: "Purifiant", title: "Exfoliant-purifiant cuir chevelu", desc: "Décolle les impuretés et résidus pour un cuir chevelu plus net.", price: "19,90€", format: "75 ml", ingredients: "Acide salicylique + argile verte", usage: "Une fois par semaine avant shampoing", image: "assets/images/concept-products/exfoliant-purifiant-cuir-chevelu.png", alt: "Exfoliant Respire cuir chevelu vert" },
+  masqueRepair: { badge: "Intense", title: "Masque réparation intense", desc: "Enveloppe les longueurs abîmées et redonne toucher doux et souplesse.", price: "21,90€", format: "200 ml", ingredients: "Céramides + huile d'argan", usage: "Une fois par semaine, 5 à 10 minutes", image: "assets/images/concept-products/masque-reparation-intense.png", alt: "Masque Respire réparation intense rouge" },
+  forceVitalite: { badge: "Cure 3 mois", title: "Force & Vitalité", desc: "Cure quotidienne pensée pour accompagner la routine cheveux, peau et ongles.", price: "39,90€", format: "90 gélules", ingredients: "Collagène marin + zinc + vitamines B", usage: "1 gélule par jour pendant 3 mois", image: "assets/images/concept-products/force-vitalite-3-mois.png", alt: "Complément Respire Force & Vitalité rouge" }
 };
 
 const segments = {
@@ -144,10 +58,10 @@ const segments = {
     heroA: "Pour 18-24 ans : routine cuir chevelu anti-odeurs, pensee pour sport, transports, soirees et cheveux vite lourds.",
     heroB: "Racines propres plus longtemps : gestes simples pour garder cheveux frais entre deux lavages.",
     diagnosticTitle: "Segment femme 18-24 : fraicheur et rythme intense.",
-    diagnosticText: "Recommandation : Déodorant stick, Brume Solaire Protection Urbaine, Routine SOS Imperfections et Stick Fraîcheur Regard.",
+    diagnosticText: "Routine recommandée : Pureté, Apaisement, Hydratant léger et Exfoliant-purifiant cuir chevelu.",
     title: "Fraicheur, racines grasses, routine rapide",
     why: "18-24 : besoin frequent de fraicheur immediate, format nomade, prix accessible, usage post-sport/transport.",
-    items: ["deodorantStick", "brumeSolaire", "routineImperfections", "stickRegard"]
+    items: ["shampoingPurete", "shampoingApaisement", "apresHydratant", "exfoliantScalp"]
   },
   "femme|25-34": {
     gender: "femme",
@@ -159,10 +73,10 @@ const segments = {
     heroA: "Pour 25-34 ans : routine beaute complete qui combine cuir chevelu sain, longueurs nourries et eclat.",
     heroB: "Une routine cheveux plus reguliere, plus sensorielle, pour garder equilibre et brillance au quotidien.",
     diagnosticTitle: "Segment femme 25-34 : equilibre et eclat.",
-    diagnosticText: "Recommandation : Sérum Glow & Protect, Huile Lactée Démaquillante, Soin Lèvres Collagène Booster et Stick Solaire.",
+    diagnosticText: "Routine recommandée : Équilibre, Hydratant léger, Sérum cuir chevelu apaisant et Masque réparation intense.",
     title: "Equilibre cuir chevelu, longueurs, eclat",
     why: "25-34 : routine beaute plus installee, attente de resultats visibles, interet pour cure et protection.",
-    items: ["serumGlow", "huileDemaquillante", "soinLevres", "stickSolaire"]
+    items: ["shampoingEquilibre", "apresHydratant", "serumScalp", "masqueRepair"]
   },
   "femme|35-44": {
     gender: "femme",
@@ -172,12 +86,12 @@ const segments = {
     alt: "Visuel Respire femme 35-44",
     heroTitle: "Densite percue, racines tonifiees, cheveux proteges.",
     heroA: "Pour 35-44 ans : routine densite qui cible cuir chevelu, nutrition et protection quotidienne.",
-    heroB: "Soin racines + cure 30 jours : approche preventive pour cheveux fatigues par stress, chaleur et pollution.",
+    heroB: "Soin racines + cure 3 mois : approche preventive pour cheveux fatigues par stress, chaleur et pollution.",
     diagnosticTitle: "Segment femme 35-44 : densite et prevention.",
-    diagnosticText: "Recommandation : Duo SOS Bonne Mine, Sérum Glow & Protect, Stick Solaire Matifiant et Soin Lèvres Collagène Booster.",
+    diagnosticText: "Routine recommandée : Réparation, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
     title: "Densite, nutrition, protection quotidienne",
     why: "35-44 : attention plus forte a densite percue, fatigue capillaire, nutrition et prevention.",
-    items: ["duoBonneMine", "serumGlow", "stickSolaire", "soinLevres"]
+    items: ["shampoingReparation", "apresNourrissant", "serumScalp", "forceVitalite"]
   },
   "femme|45+": {
     gender: "femme",
@@ -189,10 +103,10 @@ const segments = {
     heroA: "Pour 45 ans et plus : routine douce pour cuir chevelu sensible, cheveux plus secs et entretien regulier.",
     heroB: "Des gestes naturels, doux et constants pour prendre soin du cuir chevelu et nourrir les longueurs.",
     diagnosticTitle: "Segment femme 45+ : confort et nutrition.",
-    diagnosticText: "Recommandation : Duo Protection & Hydratation, Huile Lactée Démaquillante, Soin Lèvres Collagène Booster et Stick Solaire.",
+    diagnosticText: "Routine recommandée : Apaisement, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
     title: "Confort cuir chevelu, nutrition, routine douce",
     why: "45+ : besoin de douceur, cuir chevelu plus sensible, cheveux plus secs, routine rassurante.",
-    items: ["duoHydratation", "huileDemaquillante", "soinLevres", "stickSolaire"]
+    items: ["shampoingApaisement", "apresNourrissant", "serumScalp", "forceVitalite"]
   },
   "homme|18-24": {
     gender: "homme",
@@ -204,10 +118,10 @@ const segments = {
     heroA: "Pour 18-24 ans : routine anti-odeurs et racines nettes, adaptee sport, casquette, transports et sorties.",
     heroB: "Moins d'odeurs, plus de propre : routine courte pour cheveux vite lourds et debut de barbe.",
     diagnosticTitle: "Segment homme 18-24 : fraicheur et usage rapide.",
-    diagnosticText: "Recommandation : Déodorant stick, Soin Nettoyant Visage stick, Brume Solaire Protection Urbaine et Routine SOS Imperfections.",
+    diagnosticText: "Routine recommandée : Pureté, Équilibre, Hydratant léger et Exfoliant-purifiant cuir chevelu.",
     title: "Fraicheur, odeurs, racines nettes",
     why: "18-24 : besoin pratique, prix accessible, odeurs post-sport/transport, routine courte.",
-    items: ["deodorantStick", "nettoyantStick", "brumeSolaire", "routineImperfections"]
+    items: ["shampoingPurete", "shampoingEquilibre", "apresHydratant", "exfoliantScalp"]
   },
   "homme|25-34": {
     gender: "homme",
@@ -219,10 +133,10 @@ const segments = {
     heroA: "Pour 25-34 ans : routine nette et non grasse pour barbe, cuir chevelu et cheveux exposes au quotidien.",
     heroB: "Une barbe plus douce et des racines plus propres, avec gestes rapides avant travail ou sortie.",
     diagnosticTitle: "Segment homme 25-34 : barbe et cuir chevelu.",
-    diagnosticText: "Recommandation : Déodorant stick, Soin Nettoyant Visage stick, Sérum Glow & Protect et Stick Solaire Matifiant.",
+    diagnosticText: "Routine recommandée : Équilibre, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Masque réparation intense.",
     title: "Barbe propre, cuir chevelu sain, usage bureau",
     why: "25-34 : barbe plus installee, attente de routine efficace, propre, discrete et rapide.",
-    items: ["deodorantStick", "nettoyantStick", "serumGlow", "stickSolaire"]
+    items: ["shampoingEquilibre", "apresNourrissant", "serumScalp", "masqueRepair"]
   },
   "homme|35-44": {
     gender: "homme",
@@ -231,13 +145,13 @@ const segments = {
     image: "assets/images/segments-final/homme-35-44.jpg",
     alt: "Visuel Respire homme 35-44",
     heroTitle: "Racines tonifiees, barbe nourrie, routine force.",
-    heroA: "Pour 35-44 ans : routine densite percue, cure 30 jours et soin barbe sans fini gras.",
+    heroA: "Pour 35-44 ans : routine densite percue, cure 3 mois et soin barbe sans fini gras.",
     heroB: "Cuir chevelu tonifie, barbe plus souple, cheveux entretenus : routine preventive simple.",
     diagnosticTitle: "Segment homme 35-44 : densite et barbe.",
-    diagnosticText: "Recommandation : Duo Journée d’Été, Sérum Glow & Protect, Stick Solaire Matifiant et Soin Lèvres Collagène Booster.",
-    title: "Densite racines, barbe douce, cure 30 jours",
+    diagnosticText: "Routine recommandée : Réparation, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
+    title: "Densite racines, barbe douce, cure 3 mois",
     why: "35-44 : besoin de prevention, densite percue, barbe plus dense, entretien regulier.",
-    items: ["duoJourneeEte", "serumGlow", "stickSolaire", "soinLevres"]
+    items: ["shampoingReparation", "apresNourrissant", "serumScalp", "forceVitalite"]
   },
   "homme|45+": {
     gender: "homme",
@@ -249,10 +163,10 @@ const segments = {
     heroA: "Pour 45 ans et plus : routine douce pour cuir chevelu sensible, barbe seche et cheveux plus exigeants.",
     heroB: "Moins d'inconfort, plus de douceur : soin racines, barbe et longueurs avec gestes essentiels.",
     diagnosticTitle: "Segment homme 45+ : confort et entretien.",
-    diagnosticText: "Recommandation : Duo Protection & Hydratation, Huile Lactée Démaquillante, Stick Solaire Matifiant et Soin Lèvres Collagène Booster.",
+    diagnosticText: "Routine recommandée : Apaisement, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
     title: "Cuir chevelu confortable, barbe nourrie, entretien simple",
     why: "45+ : besoin de confort, peau sous barbe, cheveux plus secs, routine courte et rassurante.",
-    items: ["duoHydratation", "huileDemaquillante", "stickSolaire", "soinLevres"]
+    items: ["shampoingApaisement", "apresNourrissant", "serumScalp", "forceVitalite"]
   }
 };
 
@@ -325,6 +239,7 @@ function updateRecommendations(segment, profile) {
     card.querySelector("[data-product-badge]").textContent = product.badge;
     card.querySelector("[data-product-title]").textContent = product.title;
     card.querySelector("[data-product-desc]").textContent = product.desc;
+    card.querySelector("[data-product-meta]").textContent = `${product.format} · ${product.ingredients} · ${product.usage}`;
     card.querySelector("[data-product-price]").textContent = product.price;
   });
 }

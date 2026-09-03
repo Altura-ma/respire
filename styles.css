@@ -575,6 +575,14 @@ h3 {
   color: var(--muted);
 }
 
+.product-meta {
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .price-row {
   margin-top: auto;
   display: flex;

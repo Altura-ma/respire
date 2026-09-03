@@ -265,13 +265,11 @@ function unlock(profile) {
   applyPersonalization(profile);
   coupon.hidden = false;
   coupon.querySelector("strong").textContent = "RESPIRE10";
-  form.querySelector(".gate-submit").textContent = "CODE ACTIVE : RESPIRE10";
-  form.querySelector(".gate-submit").disabled = true;
-  form.querySelector(".gate-submit").setAttribute("aria-label", "Code RESPIRE10 activé");
-  setTimeout(() => {
-    gate.classList.add("is-hidden");
-    document.body.classList.remove("is-locked");
-  }, 2800);
+  const submitButton = form.querySelector(".gate-submit");
+  submitButton.type = "button";
+  submitButton.textContent = "CONTINUER VERS LA GAMME";
+  submitButton.dataset.unlocked = "true";
+  submitButton.setAttribute("aria-label", "Fermer le diagnostic et voir la gamme");
 }
 
 function showToast(message) {
@@ -349,6 +347,13 @@ form.addEventListener("submit", (event) => {
   showToast("Code RESPIRE10 active");
 });
 
+form.querySelector(".gate-submit").addEventListener("click", (event) => {
+  if (event.currentTarget.dataset.unlocked !== "true") return;
+  gate.classList.add("is-hidden");
+  document.body.classList.remove("is-locked");
+  document.querySelector("#produits").scrollIntoView({ behavior: "smooth" });
+});
+
 form.addEventListener("change", () => {
   const profile = currentFormProfile();
   updateLivePreview();
@@ -369,7 +374,9 @@ resetProfile.addEventListener("click", () => {
   localStorage.removeItem("respireCoupon");
   form.reset();
   form.querySelector(".gate-submit").disabled = false;
+  form.querySelector(".gate-submit").type = "submit";
   form.querySelector(".gate-submit").textContent = "RECUPERER MA REDUCTION";
+  delete form.querySelector(".gate-submit").dataset.unlocked;
   form.querySelector(".gate-submit").removeAttribute("aria-label");
   coupon.hidden = true;
   updateLivePreview();

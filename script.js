@@ -43,7 +43,7 @@ const needLabels = {
 };
 
 const products = {
-  shampoingEquilibre: { badge: "Hydratation", title: "Shampoing Équilibre", desc: "Nettoie les racines sans les dessécher et aide à garder une sensation fraîche.", price: "14,90€", format: "250 ml", ingredients: "Prébiotiques + aloe vera", usage: "2 à 3 fois par semaine", image: "assets/images/concept-products/shampoing-equilibre.png", alt: "Shampoing Respire Équilibre bleu" },
+  shampoingEquilibre: { badge: "Équilibre", title: "Shampoing Équilibre", desc: "Nettoie les racines sans les dessécher et aide à garder une sensation fraîche.", price: "14,90€", format: "Shampoing solide", ingredients: "Tous types de cheveux", usage: "2 à 3 fois par semaine", image: "assets/images/concept-products/shampoing-solide-cuir-chevelu.png", alt: "Shampoing solide Respire Équilibre" },
   shampoingPurete: { badge: "Purifiant", title: "Shampoing Pureté", desc: "Nettoie les racines qui regraissent vite et laisse le cuir chevelu léger.", price: "14,90€", format: "250 ml", ingredients: "Argile verte + zinc", usage: "2 fois par semaine", image: "assets/images/concept-products/shampoing-purete.png", alt: "Shampoing Respire Pureté vert" },
   shampoingApaisement: { badge: "Cuir chevelu", title: "Shampoing Apaisement", desc: "Nettoie en douceur les cuirs chevelus sujets aux tiraillements et inconforts.", price: "14,90€", format: "250 ml", ingredients: "Avoine + panthénol", usage: "À chaque lavage", image: "assets/images/concept-products/shampoing-apaisement.png", alt: "Shampoing Respire Apaisement vert" },
   shampoingReparation: { badge: "Souplesse", title: "Shampoing Réparation", desc: "Nettoie les cheveux abîmés et prépare les longueurs au soin réparateur.", price: "15,90€", format: "250 ml", ingredients: "Protéines végétales + huile de coco", usage: "2 à 3 fois par semaine", image: "assets/images/concept-products/shampoing-reparation.png", alt: "Shampoing Respire Réparation rouge" },
@@ -67,8 +67,8 @@ const segments = {
     heroB: "Racines propres plus longtemps : gestes simples pour garder des cheveux frais entre deux lavages.",
     diagnosticTitle: "Fraîcheur et rythme intense.",
     diagnosticText: "Routine recommandée : Pureté, Apaisement, Hydratant léger et Exfoliant-purifiant cuir chevelu.",
-    title: "Fraicheur, racines grasses, routine rapide",
-    why: "18-24 : besoin frequent de fraicheur immediate, format nomade, prix accessible, usage post-sport/transport.",
+    title: "Fraîcheur, racines grasses, routine rapide",
+    why: "18-24 : besoin fréquent de fraîcheur immédiate, format nomade, prix accessible, usage post-sport/transport.",
     items: ["shampoingPurete", "shampoingApaisement", "apresHydratant", "exfoliantScalp"]
   },
   "femme|25-34": {
@@ -77,13 +77,13 @@ const segments = {
     need: "strong",
     image: "assets/images/segments-final/femme-25-34.jpg",
     alt: "Visuel Respire femme 25-34",
-    heroTitle: "Cuir chevelu equilibre, longueurs lumineuses.",
+    heroTitle: "Cuir chevelu équilibré, longueurs lumineuses.",
     heroA: "Routine beauté complète qui combine cuir chevelu sain, longueurs nourries et éclat.",
-    heroB: "Une routine cheveux plus reguliere, plus sensorielle, pour garder equilibre et brillance au quotidien.",
+    heroB: "Une routine cheveux plus régulière, plus sensorielle, pour garder équilibre et brillance au quotidien.",
     diagnosticTitle: "Équilibre et éclat.",
     diagnosticText: "Routine recommandée : Équilibre, Hydratant léger, Sérum cuir chevelu apaisant et Masque réparation intense.",
-    title: "Equilibre cuir chevelu, longueurs, eclat",
-    why: "25-34 : routine beaute plus installee, attente de resultats visibles, interet pour cure et protection.",
+    title: "Équilibre cuir chevelu, longueurs, éclat",
+    why: "25-34 : routine beauté plus installée, attente de résultats visibles, intérêt pour cure et protection.",
     items: ["shampoingEquilibre", "apresHydratant", "serumScalp", "masqueRepair"]
   },
   "femme|35-44": {
@@ -92,13 +92,13 @@ const segments = {
     need: "strong",
     image: "assets/images/segments-final/femme-35-44.jpg",
     alt: "Visuel Respire femme 35-44",
-    heroTitle: "Densite percue, racines tonifiees, cheveux proteges.",
+    heroTitle: "Densité perçue, racines tonifiées, cheveux protégés.",
     heroA: "Routine densité qui cible cuir chevelu, nutrition et protection quotidienne.",
-    heroB: "Soin racines + cure 3 mois : approche preventive pour cheveux fatigues par stress, chaleur et pollution.",
+    heroB: "Soin racines + cure 3 mois : approche préventive pour cheveux fatigués par stress, chaleur et pollution.",
     diagnosticTitle: "Densité et prévention.",
     diagnosticText: "Routine recommandée : Réparation, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
-    title: "Densite, nutrition, protection quotidienne",
-    why: "35-44 : attention plus forte a densite percue, fatigue capillaire, nutrition et prevention.",
+    title: "Densité, nutrition, protection quotidienne",
+    why: "35-44 : attention plus forte à densité perçue, fatigue capillaire, nutrition et prévention.",
     items: ["shampoingReparation", "apresNourrissant", "serumScalp", "forceVitalite"]
   },
   "femme|45+": {
@@ -127,7 +127,7 @@ const segments = {
     heroB: "Moins d'odeurs, plus de propre : routine courte pour cheveux vite lourds et debut de barbe.",
     diagnosticTitle: "Fraîcheur et usage rapide.",
     diagnosticText: "Routine recommandée : Pureté, Équilibre, Hydratant léger et Exfoliant-purifiant cuir chevelu.",
-    title: "Fraicheur, odeurs, racines nettes",
+    title: "Fraîcheur, odeurs, racines nettes",
     why: "18-24 : besoin pratique, prix accessible, odeurs post-sport/transport, routine courte.",
     items: ["shampoingPurete", "shampoingEquilibre", "apresHydratant", "exfoliantScalp"]
   },
@@ -143,7 +143,7 @@ const segments = {
     diagnosticTitle: "Barbe et cuir chevelu.",
     diagnosticText: "Routine recommandée : Équilibre, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Masque réparation intense.",
     title: "Barbe propre, cuir chevelu sain, usage bureau",
-    why: "25-34 : barbe plus installee, attente de routine efficace, propre, discrete et rapide.",
+    why: "25-34 : barbe plus installée, attente de routine efficace, propre, discrète et rapide.",
     items: ["shampoingEquilibre", "apresNourrissant", "serumScalp", "masqueRepair"]
   },
   "homme|35-44": {
@@ -152,13 +152,13 @@ const segments = {
     need: "strong",
     image: "assets/images/segments-final/homme-35-44.jpg",
     alt: "Visuel Respire homme 35-44",
-    heroTitle: "Racines tonifiees, barbe nourrie, routine force.",
+    heroTitle: "Racines tonifiées, barbe nourrie, routine force.",
     heroA: "Routine densité perçue, cure 3 mois et soin barbe sans fini gras.",
-    heroB: "Cuir chevelu tonifie, barbe plus souple, cheveux entretenus : routine preventive simple.",
+    heroB: "Cuir chevelu tonifié, barbe plus souple, cheveux entretenus : routine préventive simple.",
     diagnosticTitle: "Densité et barbe.",
     diagnosticText: "Routine recommandée : Réparation, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
-    title: "Densite racines, barbe douce, cure 3 mois",
-    why: "35-44 : besoin de prevention, densite percue, barbe plus dense, entretien regulier.",
+    title: "Densité racines, barbe douce, cure 3 mois",
+    why: "35-44 : besoin de prévention, densité perçue, barbe plus dense, entretien régulier.",
     items: ["shampoingReparation", "apresNourrissant", "serumScalp", "forceVitalite"]
   },
   "homme|45+": {

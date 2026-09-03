@@ -670,6 +670,109 @@ h3 {
   border: 1px solid var(--ink);
 }
 
+.site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.35fr repeat(2, 0.7fr) 1.25fr;
+  gap: 42px;
+  padding: clamp(42px, 6vw, 76px) clamp(20px, 5vw, 72px) 24px;
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+
+.footer-brand .brand {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 60px;
+}
+
+.footer-brand p,
+.footer-newsletter p {
+  max-width: 310px;
+  color: var(--muted);
+}
+
+.footer-official {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.footer-column h3,
+.footer-newsletter h3 {
+  margin-bottom: 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-column a {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.footer-column a:hover,
+.footer-official:hover {
+  color: var(--accent);
+}
+
+#newsletter-form {
+  display: flex;
+  border-bottom: 1px solid var(--ink);
+}
+
+#newsletter-email {
+  min-width: 0;
+  flex: 1;
+  padding: 12px 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+}
+
+#newsletter-form button {
+  padding: 0 0 0 12px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.newsletter-status {
+  min-height: 20px;
+  margin-top: 12px;
+  color: #287a58 !important;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .profile-gate {
   position: fixed;
   inset: 0;
@@ -819,7 +922,8 @@ h3 {
   .scalp-section,
   .diagnostic-band,
   .proof-section,
-  .gate-panel {
+  .gate-panel,
+  .site-footer {
     grid-template-columns: 1fr;
   }
 
@@ -919,6 +1023,10 @@ h3 {
   .proof-list div {
     grid-template-columns: 1fr;
     min-height: 120px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
   }
 
   .profile-gate {

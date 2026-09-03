@@ -13,6 +13,8 @@ const imageSegment = document.querySelector("#image-segment");
 const selectedReco = document.querySelector("#selected-reco");
 const matrixBody = document.querySelector("#matrix-body");
 const productCards = [...document.querySelectorAll("[data-product-card]")];
+const newsletterForm = document.querySelector("#newsletter-form");
+const newsletterStatus = document.querySelector("#newsletter-status");
 
 let toastTimer;
 
@@ -241,6 +243,7 @@ function updateRecommendations(segment, profile) {
     card.querySelector("[data-product-desc]").textContent = product.desc;
     card.querySelector("[data-product-meta]").textContent = `${product.format} · ${product.ingredients} · ${product.usage}`;
     card.querySelector("[data-product-price]").textContent = product.price;
+    card.querySelector("[data-track='add']").textContent = "Ajouter à ma routine";
   });
 }
 
@@ -392,7 +395,16 @@ document.querySelectorAll("a[href^='#'], [data-track]").forEach((element) => {
       href: element.getAttribute("href") || null
     });
     if (element.dataset.track === "add") {
-      showToast("Produit ajoute - code RESPIRE10 disponible");
+      showToast("Produit ajouté à votre routine - code RESPIRE10 disponible");
     }
   });
+});
+
+newsletterForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const email = new FormData(newsletterForm).get("email");
+  localStorage.setItem("respireNewsletterEmail", email);
+  newsletterStatus.textContent = "Inscription confirmée. À bientôt.";
+  newsletterForm.reset();
+  track("newsletter_submitted");
 });

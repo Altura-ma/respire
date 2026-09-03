@@ -245,7 +245,6 @@ function updateRecommendations(segment, profile) {
     card.querySelector("[data-product-hover-image]").src = lifestyleImageFor(productKey);
     card.querySelector("[data-product-badge]").textContent = product.badge;
     card.querySelector("[data-product-title]").textContent = product.title;
-    card.querySelector("[data-product-desc]").textContent = product.desc;
     card.querySelector("[data-product-meta]").textContent = product.ingredients;
     card.querySelector("[data-product-price]").textContent = product.price;
     card.querySelectorAll("[data-track='add']").forEach((button) => {

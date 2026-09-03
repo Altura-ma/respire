@@ -760,10 +760,10 @@ h3 {
 }
 
 .product-info {
-  min-height: 170px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
-  padding: 18px 20px 20px;
+  padding: 16px 20px 20px;
 }
 
 .stars {
@@ -771,23 +771,15 @@ h3 {
 }
 
 .product-info h3 {
-  margin-bottom: 7px;
-  font-size: 20px;
-  line-height: 1.05;
-}
-
-.product-info p[data-product-desc] {
-  margin-bottom: 8px;
-  font-size: 15px;
-  line-height: 1.25;
-}
-
-.product-info p:not(.stars) {
-  color: var(--muted);
+  margin-bottom: 6px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .product-meta {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  color: var(--muted);
   font-size: 13px;
   line-height: 1.3;
   font-weight: 400;

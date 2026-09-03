@@ -389,6 +389,7 @@ function currentFormProfile() {
 }
 
 function updateLivePreview() {
+  if (!livePreview) return;
   const profile = currentFormProfile();
   const missing = !profile.gender || !profile.age;
   if (missing) {
@@ -408,6 +409,12 @@ function updateLivePreview() {
 document.body.classList.add("is-locked");
 renderMatrix();
 renderCatalogLinks();
+
+gate.addEventListener("click", (event) => {
+  if (event.target !== gate) return;
+  gate.classList.add("is-hidden");
+  document.body.classList.remove("is-locked");
+});
 
 const storedProfile = readStoredProfile();
 if (storedProfile?.gender && storedProfile?.age) {

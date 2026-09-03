@@ -65,9 +65,9 @@ const segments = {
     image: "assets/images/segments-final/femme-18-24.jpg",
     alt: "Visuel Respire femme 18-24",
     heroTitle: "Racines fraîches, cheveux légers, routine rapide.",
-    heroA: "Pour 18-24 ans : routine cuir chevelu anti-odeurs, pensée pour sport, transports, soirées et cheveux vite lourds.",
+    heroA: "Routine cuir chevelu anti-odeurs, pensée pour sport, transports, soirées et cheveux vite lourds.",
     heroB: "Racines propres plus longtemps : gestes simples pour garder des cheveux frais entre deux lavages.",
-    diagnosticTitle: "Segment femme 18-24 : fraîcheur et rythme intense.",
+    diagnosticTitle: "Fraîcheur et rythme intense.",
     diagnosticText: "Routine recommandée : Pureté, Apaisement, Hydratant léger et Exfoliant-purifiant cuir chevelu.",
     title: "Fraicheur, racines grasses, routine rapide",
     why: "18-24 : besoin frequent de fraicheur immediate, format nomade, prix accessible, usage post-sport/transport.",
@@ -80,9 +80,9 @@ const segments = {
     image: "assets/images/segments-final/femme-25-34.jpg",
     alt: "Visuel Respire femme 25-34",
     heroTitle: "Cuir chevelu equilibre, longueurs lumineuses.",
-    heroA: "Pour 25-34 ans : routine beaute complete qui combine cuir chevelu sain, longueurs nourries et eclat.",
+    heroA: "Routine beauté complète qui combine cuir chevelu sain, longueurs nourries et éclat.",
     heroB: "Une routine cheveux plus reguliere, plus sensorielle, pour garder equilibre et brillance au quotidien.",
-    diagnosticTitle: "Segment femme 25-34 : equilibre et eclat.",
+    diagnosticTitle: "Équilibre et éclat.",
     diagnosticText: "Routine recommandée : Équilibre, Hydratant léger, Sérum cuir chevelu apaisant et Masque réparation intense.",
     title: "Equilibre cuir chevelu, longueurs, eclat",
     why: "25-34 : routine beaute plus installee, attente de resultats visibles, interet pour cure et protection.",
@@ -95,9 +95,9 @@ const segments = {
     image: "assets/images/segments-final/femme-35-44.jpg",
     alt: "Visuel Respire femme 35-44",
     heroTitle: "Densite percue, racines tonifiees, cheveux proteges.",
-    heroA: "Pour 35-44 ans : routine densite qui cible cuir chevelu, nutrition et protection quotidienne.",
+    heroA: "Routine densité qui cible cuir chevelu, nutrition et protection quotidienne.",
     heroB: "Soin racines + cure 3 mois : approche preventive pour cheveux fatigues par stress, chaleur et pollution.",
-    diagnosticTitle: "Segment femme 35-44 : densite et prevention.",
+    diagnosticTitle: "Densité et prévention.",
     diagnosticText: "Routine recommandée : Réparation, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
     title: "Densite, nutrition, protection quotidienne",
     why: "35-44 : attention plus forte a densite percue, fatigue capillaire, nutrition et prevention.",
@@ -110,9 +110,9 @@ const segments = {
     image: "assets/images/segments-final/femme-45-plus.jpg",
     alt: "Visuel Respire femme 45 ans et plus",
     heroTitle: "Confort racines, douceur longueurs, routine douce.",
-    heroA: "Pour 45 ans et plus : routine douce pour cuir chevelu sensible, cheveux plus secs et entretien regulier.",
+    heroA: "Routine douce pour cuir chevelu sensible, cheveux plus secs et entretien régulier.",
     heroB: "Des gestes naturels, doux et constants pour prendre soin du cuir chevelu et nourrir les longueurs.",
-    diagnosticTitle: "Segment femme 45+ : confort et nutrition.",
+    diagnosticTitle: "Confort et nutrition.",
     diagnosticText: "Routine recommandée : Apaisement, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
     title: "Confort cuir chevelu, nutrition, routine douce",
     why: "45+ : besoin de douceur, cuir chevelu plus sensible, cheveux plus secs, routine rassurante.",
@@ -125,9 +125,9 @@ const segments = {
     image: "assets/images/segments-final/homme-18-24.jpg",
     alt: "Visuel Respire homme 18-24",
     heroTitle: "Cheveux frais, racines nettes, zero prise de tete.",
-    heroA: "Pour 18-24 ans : routine anti-odeurs et racines nettes, adaptee sport, casquette, transports et sorties.",
+    heroA: "Routine anti-odeurs et racines nettes, adaptée au sport, à la casquette, aux transports et aux sorties.",
     heroB: "Moins d'odeurs, plus de propre : routine courte pour cheveux vite lourds et debut de barbe.",
-    diagnosticTitle: "Segment homme 18-24 : fraicheur et usage rapide.",
+    diagnosticTitle: "Fraîcheur et usage rapide.",
     diagnosticText: "Routine recommandée : Pureté, Équilibre, Hydratant léger et Exfoliant-purifiant cuir chevelu.",
     title: "Fraicheur, odeurs, racines nettes",
     why: "18-24 : besoin pratique, prix accessible, odeurs post-sport/transport, routine courte.",
@@ -140,9 +140,9 @@ const segments = {
     image: "assets/images/segments-final/homme-25-34.jpg",
     alt: "Visuel Respire homme 25-34",
     heroTitle: "Barbe propre, cuir chevelu sain, routine bureau.",
-    heroA: "Pour 25-34 ans : routine nette et non grasse pour barbe, cuir chevelu et cheveux exposes au quotidien.",
+    heroA: "Routine nette et non grasse pour barbe, cuir chevelu et cheveux exposés au quotidien.",
     heroB: "Une barbe plus douce et des racines plus propres, avec gestes rapides avant travail ou sortie.",
-    diagnosticTitle: "Segment homme 25-34 : barbe et cuir chevelu.",
+    diagnosticTitle: "Barbe et cuir chevelu.",
     diagnosticText: "Routine recommandée : Équilibre, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Masque réparation intense.",
     title: "Barbe propre, cuir chevelu sain, usage bureau",
     why: "25-34 : barbe plus installee, attente de routine efficace, propre, discrete et rapide.",
@@ -155,9 +155,9 @@ const segments = {
     image: "assets/images/segments-final/homme-35-44.jpg",
     alt: "Visuel Respire homme 35-44",
     heroTitle: "Racines tonifiees, barbe nourrie, routine force.",
-    heroA: "Pour 35-44 ans : routine densite percue, cure 3 mois et soin barbe sans fini gras.",
+    heroA: "Routine densité perçue, cure 3 mois et soin barbe sans fini gras.",
     heroB: "Cuir chevelu tonifie, barbe plus souple, cheveux entretenus : routine preventive simple.",
-    diagnosticTitle: "Segment homme 35-44 : densite et barbe.",
+    diagnosticTitle: "Densité et barbe.",
     diagnosticText: "Routine recommandée : Réparation, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
     title: "Densite racines, barbe douce, cure 3 mois",
     why: "35-44 : besoin de prevention, densite percue, barbe plus dense, entretien regulier.",
@@ -170,9 +170,9 @@ const segments = {
     image: "assets/images/segments-final/homme-45-plus.jpg",
     alt: "Visuel Respire homme 45 ans et plus",
     heroTitle: "Cuir chevelu confortable, barbe nourrie, geste simple.",
-    heroA: "Pour 45 ans et plus : routine douce pour cuir chevelu sensible, barbe seche et cheveux plus exigeants.",
+    heroA: "Routine douce pour cuir chevelu sensible, barbe sèche et cheveux plus exigeants.",
     heroB: "Moins d'inconfort, plus de douceur : soin racines, barbe et longueurs avec gestes essentiels.",
-    diagnosticTitle: "Segment homme 45+ : confort et entretien.",
+    diagnosticTitle: "Confort et entretien.",
     diagnosticText: "Routine recommandée : Apaisement, Nourrissant-réparateur, Sérum cuir chevelu apaisant et Force & Vitalité.",
     title: "Cuir chevelu confortable, barbe nourrie, entretien simple",
     why: "45+ : besoin de confort, peau sous barbe, cheveux plus secs, routine courte et rassurante.",
@@ -221,7 +221,7 @@ function applyPersonalization(profile) {
   document.documentElement.dataset.need = segment.need;
   document.documentElement.dataset.gender = profile.gender;
   document.documentElement.dataset.age = profile.age;
-  variantNote.textContent = `Variante ${variant} - ${genderLabels[profile.gender]} ${ageLabels[profile.age]}`;
+  variantNote.textContent = "Sélection personnalisée pour votre routine";
   profileChip.hidden = false;
   profileChip.textContent = `${genderLabels[profile.gender]} ${profile.age}`;
   updateSegmentImages(segment, profile);
@@ -233,11 +233,11 @@ function updateSegmentImages(segment, profile) {
     image.src = segment.image;
     image.alt = segment.alt;
   });
-  imageSegment.textContent = `${genderLabels[profile.gender]} - ${ageLabels[profile.age]} - visuel adapte`;
+  imageSegment.hidden = true;
 }
 
 function updateRecommendations(segment, profile) {
-  selectedReco.querySelector("strong").textContent = `${genderLabels[profile.gender]} ${ageLabels[profile.age]} - ${segment.title}`;
+  selectedReco.querySelector("strong").textContent = segment.title;
   selectedReco.querySelector("p").textContent = segment.why;
 
   segment.items.forEach((productKey, index) => {
@@ -328,7 +328,7 @@ document.addEventListener("keydown", (event) => {
 
 function renderMatrix() {
   matrixBody.innerHTML = Object.values(segments)
-    .map((segment) => `<article class="segment-card"><span>${genderLabels[segment.gender]} · ${ageLabels[segment.age]}</span><strong>${segment.title}</strong><p>${segment.items.map((key) => products[key].title).join(" · ")}</p></article>`)
+    .map((segment) => `<article class="segment-card"><span>Routine proposée</span><strong>${segment.title}</strong><p>${segment.items.map((key) => products[key].title).join(" · ")}</p></article>`)
     .join("");
 }
 
@@ -400,8 +400,8 @@ function updateLivePreview() {
   const segment = getSegment(profile);
   const variant = getVariant(profile);
   const selectedHero = variant === "A" ? segment.heroA : segment.heroB;
-  livePreview.querySelector("strong").textContent = `${genderLabels[profile.gender]} ${ageLabels[profile.age]} - variante ${variant}`;
-  livePreview.querySelector("p").textContent = selectedHero;
+  livePreview.querySelector("strong").textContent = "Routine personnalisée";
+  livePreview.querySelector("p").textContent = "Une routine adaptée à vos besoins.";
   applyPersonalization(profile);
 }
 

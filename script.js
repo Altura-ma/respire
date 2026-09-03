@@ -380,7 +380,7 @@ document.body.classList.add("is-locked");
 renderCatalogLinks();
 
 gate.addEventListener("click", (event) => {
-  if (event.target !== gate) return;
+  if (event.target.closest?.(".gate-panel")) return;
   gate.classList.add("is-hidden");
   document.body.classList.remove("is-locked");
 });

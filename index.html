@@ -16,7 +16,7 @@
         <span>respire</span>
       </a>
       <nav class="main-nav" aria-label="Navigation principale">
-        <a href="#diagnostic">Diagnostic</a>
+        <a href="#diagnostic-capillaire">Diagnostic</a>
         <a href="#routines">Routines</a>
         <a href="#produits">Produits</a>
         <a href="#preuves">Charte</a>
@@ -24,6 +24,7 @@
       <div class="header-actions">
         <button class="profile-chip" id="profile-chip" type="button" hidden>Diagnostic</button>
         <a class="header-cta" href="#produits">Voir la gamme</a>
+        <a class="cart-link" href="#panier" aria-label="Ouvrir le panier">Panier (<span id="header-cart-count">0</span>)</a>
       </div>
     </header>
 
@@ -35,7 +36,7 @@
           <p class="hero-text" data-personal="heroText">Routine naturelle pour prendre soin du cuir chevelu, des racines, des longueurs et de la barbe, sans compromis sur la sensorialite.</p>
           <div class="hero-actions">
             <a class="button button-dark" href="#produits">Decouvrir la gamme</a>
-            <a class="button button-light" href="#diagnostic">Voir ma routine</a>
+            <a class="button button-light" href="#diagnostic-capillaire">Je fais mon diagnostic</a>
           </div>
           <p class="variant-note" id="variant-note" aria-live="polite">Sélection personnalisée après diagnostic.</p>
           <div class="hero-proof">
@@ -83,6 +84,17 @@
         <div class="diagnostic-summary">
           <p data-personal="diagnosticText">Votre diagnostic active une recommandation adaptée selon votre sexe et votre tranche d'âge.</p>
           <button class="text-button" id="reset-profile" type="button">Refaire diagnostic</button>
+        </div>
+      </section>
+
+      <section class="fillout-section" id="diagnostic-capillaire" aria-labelledby="fillout-title">
+        <div class="section-heading">
+          <p class="eyebrow">Votre routine</p>
+          <h2 id="fillout-title">Trouvez les soins adaptés à vos cheveux.</h2>
+          <p class="fillout-intro">Répondez au diagnostic capillaire pour recevoir une sélection selon vos besoins.</p>
+        </div>
+        <div class="fillout-frame">
+          <iframe src="https://brkqevpp4d.zite.so/" title="Diagnostic capillaire Respire" loading="lazy"></iframe>
         </div>
       </section>
 
@@ -200,6 +212,13 @@
         <span>Formules et données commerciales à valider avant mise en vente.</span>
       </div>
     </footer>
+
+    <aside class="cart-panel" id="panier" aria-labelledby="cart-title">
+      <div class="cart-heading"><div><p class="eyebrow">Votre sélection</p><h2 id="cart-title">Panier</h2></div><strong><span id="cart-count">0</span> article(s)</strong></div>
+      <div id="cart-items"><p>Votre panier est vide.</p></div>
+      <div class="cart-total"><span>Total indicatif</span><strong id="cart-total">0,00€</strong></div>
+      <p class="cart-note">Pré-lancement : panier de démonstration, paiement non connecté.</p>
+    </aside>
 
     <div class="profile-gate" id="profile-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
       <div class="gate-panel">

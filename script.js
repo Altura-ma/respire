@@ -244,7 +244,45 @@ function updateRecommendations(segment, profile) {
     card.querySelector("[data-product-meta]").textContent = `${product.format} · ${product.ingredients} · ${product.usage}`;
     card.querySelector("[data-product-price]").textContent = product.price;
     card.querySelector("[data-track='add']").textContent = "Ajouter à ma routine";
+    card.querySelector("[data-track='add']").dataset.productKey = productKey;
+    let productLink = card.querySelector("[data-product-link]");
+    if (!productLink) {
+      productLink = document.createElement("a");
+      productLink.dataset.productLink = "true";
+      productLink.className = "product-link";
+      productLink.textContent = "Voir la fiche produit";
+      card.querySelector("[data-product-title]").after(productLink);
+    }
+    productLink.href = `product.html?product=${productKey}`;
   });
+}
+
+function readCart() {
+  try {
+    return JSON.parse(localStorage.getItem("respireCart") || "[]");
+  } catch {
+    return [];
+  }
+}
+
+function renderCart() {
+  const cart = readCart();
+  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const total = cart.reduce((sum, item) => sum + (Number(products[item.productKey]?.price.replace(",", ".").replace("€", "")) || 0) * item.quantity, 0);
+  document.querySelector("#cart-count").textContent = count;
+  document.querySelector("#header-cart-count").textContent = count;
+  document.querySelector("#cart-total").textContent = `${total.toFixed(2).replace(".", ",")}€`;
+  const items = document.querySelector("#cart-items");
+  items.innerHTML = cart.length ? cart.map((item) => `<div class="cart-item"><span>${products[item.productKey].title}</span><strong>${item.quantity} × ${products[item.productKey].price}</strong></div>`).join("") : "<p>Votre panier est vide.</p>";
+}
+
+function addToCart(productKey) {
+  const cart = readCart();
+  const existing = cart.find((item) => item.productKey === productKey);
+  if (existing) existing.quantity += 1;
+  else cart.push({ productKey, quantity: 1 });
+  localStorage.setItem("respireCart", JSON.stringify(cart));
+  renderCart();
 }
 
 function renderMatrix() {
@@ -395,10 +433,13 @@ document.querySelectorAll("a[href^='#'], [data-track]").forEach((element) => {
       href: element.getAttribute("href") || null
     });
     if (element.dataset.track === "add") {
+      addToCart(element.dataset.productKey);
       showToast("Produit ajouté à votre routine - code RESPIRE10 disponible");
     }
   });
 });
+
+renderCart();
 
 newsletterForm.addEventListener("submit", (event) => {
   event.preventDefault();

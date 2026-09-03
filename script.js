@@ -1,4 +1,5 @@
 const gate = document.querySelector("#profile-gate");
+const gateClose = document.querySelector("#gate-close");
 const form = document.querySelector("#profile-form");
 const coupon = document.querySelector("#coupon");
 const personalNodes = document.querySelectorAll("[data-personal]");
@@ -6,7 +7,6 @@ const needCards = document.querySelectorAll("[data-need-card]");
 const resetProfile = document.querySelector("#reset-profile");
 const toast = document.querySelector("#toast");
 const segmentImages = document.querySelectorAll("[data-segment-image]");
-const imageSegment = document.querySelector("#image-segment");
 const selectedReco = document.querySelector("#selected-reco");
 const addRoutineButton = document.querySelector("#add-routine");
 const productCards = [...document.querySelectorAll("[data-product-card]")];
@@ -228,7 +228,6 @@ function updateSegmentImages(segment, profile) {
     image.src = segment.image;
     image.alt = segment.alt;
   });
-  imageSegment.hidden = true;
 }
 
 function updateRecommendations(segment, profile) {
@@ -389,10 +388,20 @@ function currentFormProfile() {
 document.body.classList.add("is-locked");
 renderCatalogLinks();
 
-gate.addEventListener("click", (event) => {
-  if (event.target.closest?.(".gate-panel")) return;
+function closeGate() {
   gate.classList.add("is-hidden");
   document.body.classList.remove("is-locked");
+}
+
+gate.addEventListener("click", (event) => {
+  if (event.target.closest?.(".gate-panel")) return;
+  closeGate();
+});
+
+gateClose.addEventListener("click", closeGate);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !gate.classList.contains("is-hidden")) closeGate();
 });
 
 const storedProfile = readStoredProfile();
